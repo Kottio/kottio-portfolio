@@ -24,15 +24,16 @@ export default function BlogPage() {
         </section> */}
         <section className="px-10 py-10">
 
-          <div className=" border-1 w-80 h-100 rounded flex flex-col  py-1 ">
-            <span className="text-sm px-3 text-[#639FA1]">June 20, 2025</span>
-            <span className="text-xl px-3" >Data Engeneering in Impact</span>
-            <div className="w-full bg-blue-200 h-50 my-3">image</div>
-            <ul className="text-sm px-3 h-8 flex gap-2  ">
+          <div className=" border-1 rounded w-80 h-100  flex flex-col  py-1 ">
+            <span className="text-sm px-2 text-[#639FA1]">June 20, 2025</span>
+            <span className="text-xl px-2" >Data Engeneering in Impact</span>
+            <div className="w-full bg-blue-200 h-50 mb-3 mt-1">image</div>
+            <ul className=" px-2 h-8 flex gap-1  ">
               <Badge variant="developer">Dev</Badge>
               <Badge variant="photo">Photo</Badge>
             </ul>
-            <span className="px-3">Modern Day data pipeline transform how impact change the world... </span>
+
+            <span className="px-2 pt-2">Modern Day data pipeline transform how impact change the world... </span>
           </div>
 
 

@@ -36,9 +36,9 @@ export default function BlogPage() {
           <span className="w-1 /3 px-10">Welcome to My Blog where I share my creative and deevelopper journey</span>
         </section> */}
 
-        <section className="px-10 flex ">
+        <section className="px-10 flex gap-3 pt-3  ">
 
-          <div className="border-b-1 border-l-1 w-120   flex flex-col  hover:mt-3 hover:border-t-1 ">
+          <div className="border-y-1 border-x-1 w-120   flex flex-col  hover:mt-3 hover:border-t-1 ">
             <div className=" h-70 w-full flex flex-col items-center justify-center ">
               <div className="relative h-19/20 w-19/20">
                 <Image src={"/Tunesia-22.jpg"} alt={"Hey"} fill className="object-cover " />
@@ -62,7 +62,7 @@ export default function BlogPage() {
             </div>
 
           </div>
-          <div className="border-b-1 border-l-1 w-120   flex flex-col  hover:mt-3 hover:border-t-1 ">
+          <div className="border-y-1 border-x-1 w-120   flex flex-col  hover:mt-3 hover:border-t-1 ">
             <div className=" h-70 w-full flex flex-col items-center justify-center ">
               <div className="relative h-19/20 w-19/20">
                 <Image src={"/tree.jpg"} alt={"Hey"} fill className="object-cover " />
@@ -87,7 +87,7 @@ export default function BlogPage() {
 
           </div>
 
-          <div className="border-b-1 border-x-1 w-120   flex flex-col  hover:mt-3 hover:border-t-1 ">
+          <div className="border-y-1 border-x-1 w-120   flex flex-col  hover:mt-3 hover:border-t-1 ">
             <div className=" h-70 w-full flex flex-col items-center justify-center ">
               <div className="relative h-19/20 w-19/20">
                 <Image src={"/fog1.jpg"} alt={"Hey"} fill className="object-cover " />

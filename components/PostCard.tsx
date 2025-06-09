@@ -1,8 +1,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Post } from "@/types/posts";
 
-export default function PostCard({ post }) {
+export default function PostCard(post: Post) {
   return (
     <Link key={post.slug} href={`/blog/${post.slug}`} className="border-y-1 border-x-1 w-116 h-125 flex flex-col hover:mt-3 hover:border-t-1 transition-all duration-120">
       <div className="h-70 w-full flex flex-col items-center justify-center">

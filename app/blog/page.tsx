@@ -1,5 +1,6 @@
 import PostCard from "@/components/PostCard";
 import { getAllPosts } from "@/lib/mdx";
+import { Post } from "@/types/posts";
 
 
 export default function BlogPage() {
@@ -37,7 +38,7 @@ export default function BlogPage() {
         {/* POSTS */}
         <section className="px-10 flex flex-wrap   gap-3 pt-3 justify-between  ">
           {posts.map((post) => {
-            return PostCard({ post })
+            return PostCard(post)
           })}
         </section>
       </div>

@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { Post } from "@/types/posts";
 
 const postsDirectory = path.join(process.cwd(), "content/blog");
 
@@ -15,7 +16,7 @@ export function getAllPosts() {
     return {
       slug,
       ...data,
-    };
+    } as Post;
   });
 
   return posts.sort(

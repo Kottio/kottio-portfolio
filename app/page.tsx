@@ -7,7 +7,12 @@ export default function Home() {
       <div className=" h-29/30 w-19/20 border-1">
         {/* Headers */}
         <section className="flex justify-between items-center h-1/12 px-4">
-          <span className="text-4xl">KOTTIO</span>
+          <div className="text-4xl flex  items-center">
+
+
+            <Link href={"/"}>KOTTIO</Link>
+
+          </div>
           <ul className=" flex w-2/5 justify-between text-sm ">
             <Link href={"/blog"}>BLOG</Link>
             <Link href={"/blog"}>PROJECTS</Link>
@@ -20,12 +25,19 @@ export default function Home() {
           <Image src="/thumbnailsPosts/post3.jpg" alt="MainImage" fill className="object-cover"></Image>
         </section>
         <section className="w-full h-2/9 flex justify-center items-center ">
-          <div className="w-8/10 flex justify-between">
-            <div className="flex flex-col">
-              <span className="font-bold text-xl">CREATIVE SOFTWARE ENGINEER</span>
-              {/* <span className="text-xl">Thomas Cottiaux</span> */}
-              <span>Photograph & Musician</span>
+          <div className="w-8/10 flex justify-between items-start">
 
+            <div className="flex items-center gap-1">
+              <div className="w-25 h-15 relative">
+                <Image src="/face.png" alt="Logo" fill className="object-cover"></Image>
+              </div>
+
+              <div className="flex flex-col">
+                <span className="font-bold text-xl">CREATIVE SOFTWARE ENGINEER</span>
+                {/* <span className="text-xl">Thomas Cottiaux</span> */}
+                <span>Photograph & Musician</span>
+
+              </div>
             </div>
 
             <div className="flex flex-col">

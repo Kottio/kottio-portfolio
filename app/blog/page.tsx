@@ -1,6 +1,7 @@
 import PostCard from "@/components/PostCard";
 import { getAllPosts } from "@/lib/mdx";
 import { Post } from "@/types/posts";
+import Link from "next/link";
 
 
 export default function BlogPage() {
@@ -11,7 +12,7 @@ export default function BlogPage() {
       <div className="">
         <section className="mx-10 px-10 flex justify-between items-center border-x-1 border-b-1 ">
 
-          <span className="text-4xl">KOTTIO <span className="font-bold">BLOG</span></span>
+          <span className="text-4xl"><Link href={"/"}>KOTTIO</Link><span className="font-bold">BLOG</span></span>
           <div className="flex gap-10 h-full">
             <ul className="flex  h-full font-light text-sm">
               <li className="h-20 w-30 flex justify-center items-center border-l-1 hover:bg-[#639FA1] hover:text-white hover:scale-105 transition-all duration-100"><span>PROJECTS</span></li>

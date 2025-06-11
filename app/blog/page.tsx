@@ -1,6 +1,5 @@
 import PostCard from "@/components/PostCard";
 import { getAllPosts } from "@/lib/mdx";
-import { Post } from "@/types/posts";
 import Link from "next/link";
 
 

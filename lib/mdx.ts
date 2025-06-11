@@ -27,7 +27,7 @@ export function getAllPosts() {
 }
 
 export async function getPostBySlug(slug: string): Promise<{
-  source: MDXRemoteSerializeResult;
+  source: string;
   frontMatter: {
     title: string;
     date: string;
@@ -44,7 +44,7 @@ export async function getPostBySlug(slug: string): Promise<{
   console.log("This is", content);
 
   return {
-    source: mdxSource,
+    source: content,
     frontMatter: data as any,
   };
 }

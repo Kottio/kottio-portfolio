@@ -3,7 +3,6 @@ import path from "path";
 import matter from "gray-matter";
 import { Post } from "@/types/Posts";
 import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemoteSerializeResult } from "next-mdx-remote";
 
 const postsDirectory = path.join(process.cwd(), "content/blog");
 

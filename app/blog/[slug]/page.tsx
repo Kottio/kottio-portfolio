@@ -1,7 +1,7 @@
-import { getPostBySlug } from "@/lib/mdx";
+import { getAllPosts, getPostBySlug } from "@/lib/mdx";
+
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { notFound } from "next/navigation";
 import Link from "next/link";
 
 interface BlogPostPageProps {
@@ -10,9 +10,14 @@ interface BlogPostPageProps {
   };
 }
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const posts = getAllPosts()
+
   const { slug } = await params
   try {
     const { source, frontMatter } = await getPostBySlug(slug)
+
+    const relatedPosts = posts.filter(post => { return post.tags.some(tag => frontMatter.tags.includes(tag)) }))
+
 
     return (
       <div className="min-h-screen">
@@ -47,7 +52,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               src={frontMatter.image}
               alt={frontMatter.title}
               fill
-              className="object-cover "
+              className="object-cover  "
             />
             {/* Overlay with title */}
             <div className="absolute inset-0 bg-black/40 flex items-end">
@@ -58,7 +63,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="flex items-center gap-6 text-lg">
 
                   <span className="text-white/80">
-                    {"5 MIN READ"}
+                    {frontMatter.readTime}
                   </span>
                 </div>
               </div>
@@ -102,7 +107,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </p>
             </div>
 
-            <div className="mdx-content">
+            <div className="markdown-content">
               <MDXRemote
                 source={source}
                 options={{
@@ -149,28 +154,41 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               RELATED POSTS
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* You can map through related posts here */}
 
 
-              <div className="border-1 hover:border-[#639FA1] hover:scale-105 transition-all duration-100 cursor-pointer">
-                <div className="h-48 bg-gray-200 border-b-1"></div>
-                <div className="p-4">
-                  <h4 className="font-bold mb-2">RELATED POST TITLE</h4>
-                  <p className="text-sm text-gray-600 mb-4">Brief description...</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-xs">2024-01-15</span>
-                    <div className="w-6 h-6">
-                      <svg viewBox="0 0 48 48" fill="none">
-                        <path d="M14 34L34 14M34 14H14M34 14V34" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
+              {relatedPosts.map(post => {
+                return <Link href={`/blog/${post.slug}`} key={post.slug}>
+                  <div className="border-1 hover:border-[#639FA1] hover:scale-105 transition-all duration-100 cursor-pointer">
+                    <div className="h-55 bg-gray-200 border-b-1 relative">
+                      <Image src={post.image} alt="Image" fill></Image>
+                    </div>
+                    <div className="p-4">
+                      <h4 className="font-bold mb-2">{post.title}</h4>
+                      <p className="text-sm text-gray-600 mb-4">{post.summary}</p>
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs">{post.date}</span>
+                        <div className="w-6 h-6">
+                          <svg viewBox="0 0 48 48" fill="none">
+                            <path d="M14 34L34 14M34 14H14M34 14V34" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </Link>
+              })}
+
+
             </div>
           </div>
         </section>
-      </div>
+
+
+
+
+
+
+      </div >
     )
   } catch (error) {
     return (

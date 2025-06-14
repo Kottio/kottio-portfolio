@@ -33,6 +33,7 @@ export async function getPostBySlug(slug: string): Promise<{
     image: string;
     tags: string[];
     summary: string;
+    readTime: string;
   };
 }> {
   const fullPath = path.join(postsDirectory, `${slug}.mdx`);

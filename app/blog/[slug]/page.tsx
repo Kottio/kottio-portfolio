@@ -1,5 +1,4 @@
 import { getAllPosts, getPostBySlug } from "@/lib/mdx";
-
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
@@ -20,7 +19,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
 
     return (
-      <div className="min-h-screen">
+      <div className="min-h-screen ">
         {/* Header Navigation */}
         <section className="mx-10 px-10 flex justify-between items-center border-x-1 border-b-1">
           <span className="text-4xl">
@@ -100,7 +99,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* Content */}
         <article className="mx-10 border-x-1">
-          <div className="max-w-4xl mx-auto px-10 py-16 prose prose-lg prose-gray max-w-none">
+          <div className=" mx-auto px-10 py-16 prose prose-lg prose-gray max-w-none">
             <div className="border-l-4 border-[#639FA1] pl-8 mb-12">
               <p className="text-2xl text-gray-700 leading-relaxed font-light">
                 {frontMatter.summary}

@@ -4,9 +4,9 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const posts = getAllPosts()
@@ -15,7 +15,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   try {
     const { source, frontMatter } = await getPostBySlug(slug)
 
-    const relatedPosts = posts.filter(post => { return post.tags.some(tag => frontMatter.tags.includes(tag)) }))
+    const relatedPosts = posts.filter(post => { return post.tags.some(tag => frontMatter.tags.includes(tag)) })
 
 
     return (

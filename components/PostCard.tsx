@@ -1,7 +1,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Post } from "@/types/posts";
+import { Post } from "@/types/Posts";
+
+
 
 export default function PostCard(post: Post) {
   return (

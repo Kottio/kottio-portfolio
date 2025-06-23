@@ -71,7 +71,7 @@ export default function Home() {
               <div className="flex flex-col">
                 <span className="font-bold text-xl">CREATIVE SOFTWARE ENGINEER</span>
                 {/* <span className="text-xl">Thomas Cottiaux</span> */}
-                <span>Photograph & Musician</span>
+                {/* <span>Photograph & Musician</span> */}
 
               </div>
             </div>
@@ -102,6 +102,3 @@ export default function Home() {
   );
 }
 
-//  <div className="relative h-19/20 w-19/20">
-//           <Image src={post.image} alt={post.title} fill className="object-cover" />
-//         </div>

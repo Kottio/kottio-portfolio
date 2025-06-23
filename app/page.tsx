@@ -69,8 +69,8 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col">
+                <span className="text-xl">Thomas Cottiaux</span>
                 <span className="font-bold text-xl">CREATIVE SOFTWARE ENGINEER</span>
-                {/* <span className="text-xl">Thomas Cottiaux</span> */}
                 {/* <span>Photograph & Musician</span> */}
 
               </div>

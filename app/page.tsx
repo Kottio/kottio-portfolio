@@ -9,7 +9,7 @@ export default function Home() {
   const images = [
     "/thumbnailsPosts/post1.jpg",
     "/thumbnailsPosts/post2.jpg",
-    "/thumbnailsPosts/post3.jpg",
+    "/thumbnailsPosts/post4.jpg",
   ]
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -29,7 +29,6 @@ export default function Home() {
         {/* Headers */}
         <section className="flex justify-between items-center h-1/12 px-4">
           <div className="text-4xl flex  items-center">
-
 
             <Link href={"/"}>KOTTIO</Link>
 

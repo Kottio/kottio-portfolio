@@ -8,9 +8,6 @@ import projectsData from '../public/projects/project.json';
 
 export default function Home() {
 
-
-
-
   return (
     <div className=" text-neutral-800 bg-white">
       <div className="h-screen flex flex-col">
@@ -137,8 +134,10 @@ export default function Home() {
         />
         <div className="relative h-full flex w-screen items-center p-5 md:p-10">
           <div className="w-full flex flex-col md:flex-row gap-6 md:gap-10 justify-center items-center">
-            {projectsData.map((project) => (
-              <div key={project.name} className="bg-white w-full md:w-100 sm:h-auto md:h-150 h-150 border-black-500 border-10 rounded p-6 flex flex-col gap-4 hover:shadow-2xl transition-shadow ">
+            {projectsData.map((project, index) => (
+              <div key={project.name} className={`bg-white w-full md:w-100 sm:h-auto md:h-150 h-150 border-black-500 border-10 rounded p-6 flex flex-col gap-4 hover:shadow-2xl transition-shadow ${index == 0 ? "border-black" : "border-green-600"}`}
+
+              >
                 {/* Logo and Name */}
                 <div className="flex items-center gap-4">
                   <Image src={project.logo} alt={project.name} width={120} height={60} className="rounded" />
@@ -196,9 +195,20 @@ export default function Home() {
 
         </Marquee>
       </div>
-
+      <section className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-200 ">
+        <Image
+          src={"/LandingPage/land5.jpg"}
+          fill
+          alt="mountains"
+          className="object-cover object-bottom "
+          priority
+        />
+      </section>
+      <div className="relative h-full flex w-screen items-center p-5 md:p-10">
+      </div>
 
     </div >
+
 
 
   )

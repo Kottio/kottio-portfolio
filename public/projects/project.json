@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Melodio",
+    "tagline": "FEEL IT, MAKE IT",
+    "description": "Modular workspace to explore & create music without imposing guidelines on the creative process. Break down barriers of music theory, give inspiration and axes of exploration through Creative Pods.",
+    "logo": "/projects/melodio/melodioLogo.png",
+    "screenshot": "/projects/melodio/MelodioScreenshot.png",
+    "tech": ["React", "TypeScript", "Express.js", "Tailwind CSS", "Web Audio API", "Meyda", "ChatGPT API", "Figma", "PostgreSQL","Prisma"],
+    "highlights": [
+      "Real-time audio processing with Web Audio API for note onset detection and pitch recognition",
+      "AI integration with ChatGPT API for structured musical data generation",
+      "User-adaptive interface designed to adapt to individual workflows and skill levels",
+      "Low-latency audio recognition and API performance optimization"
+    ],
+    "links": {
+      "github": "https://github.com/Kottio/MelodIo",
+      "sheet": "https://drive.google.com/file/d/1uFdca_7QgQUJCNlZWJogrhUWY_PtXIwD/view?usp=sharing"
+    }
+  },
+  {
+    "name": "MapShot",
+    "tagline": "Discover & Share Photo Locations",
+    "description": "Mobile-first application designed to help photographers build an ecosystem of filterable artistic locations. Upload photos, vote on moods, reference ideal time, light and affluence.",
+    "logo": "/projects/mapshot/MapshotLogo.png",
+    "screenshot": "/projects/mapshot/mapshotScreenshot.png",
+
+    "tech": ["React", "TypeScript", "Next.js", "Mapbox API", "Cloudinary", "PostgreSQL","Prisma"],
+    "highlights": [
+      "Geotag, catalog, and discover photo locations with mood filtering",
+      "Cost-efficient API optimization minimizing Mapbox calls while maintaining smooth interactions",
+      "Drawer-based navigation with fast-filtering system for instant results",
+      "Lazy loading and resource caching for seamless performance across varying networks"
+    ],
+    "links": {
+      "github": "https://github.com/Kottio/focalpoint",
+      "sheet": "https://drive.google.com/file/d/1POi8RI0AspQhCTO4AXjRHmnbjI6mCsVD/view?usp=sharing"
+    }
+  }
+]

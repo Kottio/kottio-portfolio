@@ -1,11 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
-
 import Link from "next/link";
 import { Zap, Rocket, BookMarked, Github, FileText, Lightbulb, Palette, Code2, TrendingUp } from 'lucide-react';
-
 import projectsData from '../public/projects/project.json';
+import Marquee from "react-fast-marquee";
 import { Bebas_Neue } from 'next/font/google'
 
 
@@ -14,10 +14,11 @@ const bebas = Bebas_Neue({
   subsets: ['latin']
 })
 export default function Home() {
-
+  const [showAbout, setShowAbout] = useState(false);
 
   return (
     <div className=" text-neutral-800 bg-white">
+      {/* ==================== HERO SECTION ==================== */}
       <div className="h-screen flex flex-col">
         <div className="w-screen relative z-1 -mt-20 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-150">
 
@@ -74,16 +75,7 @@ export default function Home() {
 
       </div>
 
-      {/* <div className="h-10 w-screen flex justify-around items-center">
-        <span >MY OFFERS</span>
-        <span >LAUNCH YOUR IDEA</span>
-        <span >DEMOCRATIZE DATA</span>
-        <span >CONSULTING</span>
-        <span >DATA ENGINEERING</span>
-
-
-      </div> */}
-
+      {/* ==================== MY OFFERS SECTION ==================== */}
       <section className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-200 ">
         <Image
           src={"/LandingPage/land3.jpg"}
@@ -103,6 +95,8 @@ export default function Home() {
               <p className="text-sm md:text-base lg:text-lg">Transform your vision into reality with full-stack development</p>
             </div>
 
+
+
             {/* Top right panel */}
             <div className="bg-indigo-200 rounded-xl p-6 flex flex-col justify-center text-black ">
               <BookMarked className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 mb-2" />
@@ -120,12 +114,8 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="h-10 w-screen flex items-center justify-center  overflow-hidden">
-        <span className=""> -- PROJECTS -- </span>
-
-      </div>
-
-      <section className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-200 ">
+      {/* ==================== MY PROJECTS SECTION ==================== */}
+      <section className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-220 ">
         <Image
           src={"/LandingPage/land4.jpg"}
           fill
@@ -133,7 +123,14 @@ export default function Home() {
           className="object-cover object-bottom  "
           priority
         />
-        <div className="relative h-full flex w-screen items-center p-5 md:p-10">
+        <div className="absolute top-0 w-screen flex flex-col items-center justify-center bg-black/10 p-5 z-20">
+          <h3 className={`${bebas.className} text-4xl tracking-wider`}> MY PROJECTS </h3>
+          <div className="w-20 h-1 bg-purple-500"></div>
+        </div>
+
+        <div className="relative h-full flex w-screen items-center p-5 md:p-10 pt-32">
+
+
           <div className="w-full flex flex-col md:flex-row gap-6 md:gap-10 justify-center items-center">
             {projectsData.map((project, index) => (
               <div key={project.name} className={`bg-white w-full md:w-100 sm:h-auto md:h-150 h-150 border-black-500 border-10 rounded p-6 flex flex-col gap-4 hover:shadow-2xl transition-shadow ${index == 0 ? "border-black" : "border-green-600"}`}
@@ -186,13 +183,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <div className="w-screen h-4 bg-white"></div> */}
-      {/* <div className={` h-10 w-screen flex items-center justify-center  overflow-hidden text-2xl ${bebas.className}`}>
-        <span className=""> TECH   STACK </span>
 
-      </div> */}
-
-      <section className="w-screen h-200 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] ">
+      {/* ==================== TECH STACK SECTION ==================== */}
+      <section className="w-screen h-220 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] ">
         <Image
           src={"/LandingPage/land7.jpg"}
           fill
@@ -200,13 +193,16 @@ export default function Home() {
           className="object-cover object-bottom"
           priority
         />
-        <div className="absolute inset-0 bg-black/30 z-0"></div>
+        <div className="absolute inset-0 bg-black/40 z-0"></div>
+        <div className="absolute top-0 w-screen flex flex-col items-center justify-center  bg-white/80  p-5  z-20">
+          <h3 className={`${bebas.className} text-4xl tracking-wider`}>TECH STACK </h3>
+          <div className="w-20 h-1 bg-purple-500"></div>
+        </div>
 
         {/* Tech Stack & Skills Section - overlaid on image */}
-        <div className="relative z-10 h-full flex flex-col w-screen items-center justify-center p-10 md:p-20">
+        <div className="relative z-10 h-full flex flex-col w-screen items-center p-10 md:p-20">
 
-
-          <div className="w-full flex justify-center gap-20  ">
+          <div className="w-full flex justify-center gap-20 mt-20">
             {/* DEV Section - Left */}
 
             <div className="flex justify-center items-center gap-3 bg-black rounded-2xl p-5">
@@ -317,10 +313,173 @@ export default function Home() {
             </div>
           </div>
         </div >
+      </section>
 
-      </section >
+      {/* ==================== ABOUT ME SECTION ==================== */}
+      <section className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-220 ">
+        <Image
+          src={"/LandingPage/land6.jpg"}
+          fill
+          alt="mountains"
+          className="object-cover object-bottom  "
+          priority
+        />
+        <div className="h-auto  absolute   top-0 w-screen flex flex-col items-center justify-center  bg-white/80  p-5  z-20">
+          <h3 className={`${bebas.className} text-4xl tracking-wider`}>ABOUT ME </h3>
+          <div className="w-20 h-1 bg-purple-500"></div>
+        </div>
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-    </div >
+        <div className="relative z-10 h-full w-screen flex   justify-center items-center pt-20  ">
+          <div className="flex h-auto w-250 justify-center items-center gap-10  ">
+            <div className="text-white max-w-150 flex flex-col ">
+
+              <span className={`${bebas.className} text-5xl`}>Thomas Cottiaux</span>
+
+
+              {/* <span className="text-2xl ">Innovation, Development, Optimization and Testing</span> */}
+              <br />
+
+              <span className="text-2xl">Building digital product that matters.
+              </span>
+              <br />
+
+              <button
+                onClick={() => setShowAbout(!showAbout)}
+                className="px-6 py-3 bg-purple-700 text-white   hover:bg-purple-600 transition-all w-fit"
+              >
+                {showAbout ? "CLOSE" : "READ ABOUT ME"}
+              </button>
+              <br />
+
+              <div
+                className={`flex flex-col gap-4   overflow-hidden transition-all duration-500 ease-in-out origin-top ${showAbout ? 'max-h-[1000px] opacity-100  scale-y-100' : 'max-h-0 opacity-0 p-0 scale-y-0'
+                  }`}
+              >
+                <span className="text">My path hasn't been typical. I started as a data engineer helping companies measure their environmental impact through ESG analytics. I built dashboards, ML models, and data infrastructure that powered sustainability at scale.</span>
+
+                <span className="text"> But something was missing.</span>
+
+                <span className="text">My experience working directly with local social organizations still echoed as the most driven I've ever been. I decided I needed to be close to the people creating change. So I spent years facilitating innovation workshops, led social innovation programs, mentored founders, and learned that for tech to be impactful, it didn't need to be complex—it needed to be centered around people. </span>
+
+                <span className="text">Today, I combine both worlds. I help creative entrepreneurs, social ventures, and mission-driven organizations turn ambitious ideas into digital realities. Whether it's prototyping an MVP, building data infrastructure that actually helps make decisions, or facilitating design sprints to craft user experiences. I bring technical experience and creative empathy to every project. </span>
+
+                <span className="text"> I've been pursuing photography and music all my life, and I make them an inherent part of my process, bringing stories and aesthetics to the work.</span>
+
+                <span className="text">If you believe in your project and want to bring it to the next level, let's talk</span>
+              </div>
+            </div>
+            <Image
+              src={"/LandingPage/photomoi2.jpg"}
+              width={400}
+              height={400}
+              alt="photoTom"
+              className="rounded grayscale hover:grayscale-0 transition-all h-auto w-auto max-h-[400px]"
+            ></Image>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ==================== TRUSTED BY / LOGOS SECTION ==================== */}
+      <div className="h-auto w-screen flex flex-col items-center justify-center py-8 bg-white gap-2">
+        <h3 className={`${bebas.className} text-4xl tracking-wider`}>THEY TRUSTED ME</h3>
+        <div className="w-20 h-1 bg-purple-500"></div>
+      </div>
+
+      <section className="w-screen h-55 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] ">
+        <Image
+          src={"/LandingPage/land5.jpg"}
+          fill
+          alt="mountains"
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-white/75"></div>
+
+        <div className="relative w-full h-full flex items-center justify-center">
+          <Marquee speed={50} gradient={false}>
+            {[
+              { name: "Aplanet", logo: "/logos/Aplanet.png" },
+              { name: "Bechained", logo: "/logos/Bechained.png" },
+              { name: "Homeless Entrepreneur", logo: "/logos/HE.png" },
+              { name: "180 Degree Consulting", logo: "/logos/180dc.png" },
+              { name: "Impact Hub", logo: "/logos/impacthub.png" }
+            ].map((item) => (
+              <div key={item.name} className="mx-30">
+                <Image
+                  src={item.logo}
+                  width={180}
+                  height={100}
+                  alt={item.name}
+                />
+              </div>
+            ))}
+          </Marquee>
+        </div>
+
+
+      </section>
+
+      {/* ==================== PHOTOGRAPHY CTA SECTION ==================== */}
+      <div className="h-auto w-screen flex flex-col items-center justify-center py-8 bg-white gap-2">
+        <h3 className={`${bebas.className} text-4xl tracking-wider`}>LIKED THE PHOTOS? </h3>
+        <div className="w-20 h-1 bg-purple-500"></div>
+      </div>
+
+      {/* ==================== FOOTER ==================== */}
+      <footer className="w-screen bg-black text-white py-10 px-5 md:px-10 lg:px-20">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Left - About */}
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-3">
+              <Image src={"/face.png"} alt="face" height={50} width={50} className="bg-white rounded-3xl" />
+              <span className={`${bebas.className} text-3xl `}>KOTTIO</span>
+            </div>
+            <p className="text-sm text-gray-400">
+              Full Stack Developer & Data Consultant helping creative entrepreneurs
+              turn ambitious ideas into digital realities.
+            </p>
+          </div>
+
+          {/* Center - Quick Links */}
+          <div className="flex flex-col gap-4">
+            <h3 className={`${bebas.className} text-2xl`}>Quick Links</h3>
+            <ul className="flex flex-col gap-2 text-sm text-gray-400">
+              <li className="hover:text-purple-500 transition-colors cursor-pointer">About</li>
+              <li className="hover:text-purple-500 transition-colors cursor-pointer">Projects</li>
+              <li className="hover:text-purple-500 transition-colors cursor-pointer">Tech Stack</li>
+              <li className="hover:text-purple-500 transition-colors cursor-pointer">Contact</li>
+            </ul>
+          </div>
+
+          {/* Right - Contact */}
+          <div className="flex flex-col gap-4">
+            <h3 className={`${bebas.className} text-2xl`}>Get In Touch</h3>
+            <div className="flex flex-col gap-2 text-sm text-gray-400">
+              <a href="mailto:thomas.cottiaux@example.com" className="hover:text-purple-500 transition-colors">
+                thomas.cottiaux@gmail.com
+              </a>
+              <div className="flex gap-4 mt-2">
+                <a href="#" className="hover:text-purple-500 transition-colors">
+                  <Github className="w-6 h-6" />
+                </a>
+                <a href="#" className="hover:text-purple-500 transition-colors">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+          <p>© {new Date().getFullYear()} Thomas Cottiaux. Building products that matter.</p>
+        </div>
+      </footer>
+    </div>
 
 
 

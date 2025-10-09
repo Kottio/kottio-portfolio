@@ -86,29 +86,158 @@ export default function Home() {
           priority
         />
         {/* My offers Bento */}
-        <div className="relative z-20 w-full h-full flex justify-center items-center p-5 md:p-10">
-          <div className="bg-white/90 backdrop-blur-sm h-full w-full md:h-5/6 md:w-5/6 rounded-2xl p-4 md:p-6 grid grid-cols-2 grid-rows-2 gap-4">
+        <div className="relative z-20 w-full h-full flex justify-center items-center p-2 md:p-10">
+          <div className="bg-white/90 backdrop-blur-sm h-full w-full md:h-5/6 md:w-5/6 rounded-2xl p-2 md:p-4 grid grid-cols-2 grid-rows-2 gap-4">
+
             {/* Large left panel - spans 2 rows */}
-            <div className="row-span-2 bg-purple-500 rounded-xl p-6 flex flex-col justify-center text-white">
-              <Rocket className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 mb-4" />
-              <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">Launch Your Ideas</h3>
-              <p className="text-sm md:text-base lg:text-lg">Transform your vision into reality with full-stack development</p>
+            <div className="row-span-2 bg-purple-500 rounded-xl p-6 flex text-white group relative overflow-hidden">
+
+              <div className=" flex flex-col justify-center group-hover:opacity-0  transition-opacity ease-in-out">
+                <Rocket className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 mb-4" />
+                <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">Build Your <br />Digital Product </h3>
+                <p className="text-xl md:text-base lg:text-lg">App / Web App, Tested Prototypes, Landing Page, Data Products </p>
+              </div>
+
+              <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-8 lg:px-12 rounded-xl
+                group-hover:opacity-100 opacity-0 transition-all duration-300 ease-in-out
+                bg-black/80 backdrop-blur-sm">
+
+                {/* Title */}
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+                  Build Your <br />Digital Product
+                </h3>
+
+                {/* Subtitle/Hook */}
+                <p className="text-base md:text-lg lg:text-xl mb-6 text-gray-200 font-medium">
+                  From idea to launch.
+                </p>
+
+                {/* Features List */}
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start gap-3 text-sm md:text-base lg:text-lg text-gray-100">
+                    <span className="text-green-400 mt-1">→</span>
+                    <span>Strategic clarity through workshops & design sprints</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm md:text-base lg:text-lg text-gray-100">
+                    <span className="text-green-400 mt-1">→</span>
+                    <span>Working products: MVPs, features, or rebuilds that ship</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm md:text-base lg:text-lg text-gray-100">
+                    <span className="text-green-400 mt-1">→</span>
+                    <span>Smart data & dashboards from day one</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm md:text-base lg:text-lg text-gray-100">
+                    <span className="text-green-400 mt-1">→</span>
+                    <span>Compelling storytelling: pitches, presentations, visuals</span>
+                  </li>
+                </ul>
+
+                {/* CTA */}
+                <button className="self-start px-6 py-2 bg-white text-black font-semibold 
+                     rounded-md hover:bg-gray-100 transition-colors">
+                  Learn More →
+                </button>
+              </div>
+
             </div>
 
 
 
             {/* Top right panel */}
-            <div className="bg-indigo-200 rounded-xl p-6 flex flex-col justify-center text-black ">
-              <BookMarked className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 mb-2" />
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">Teach and Empower</h3>
-              <p className="text-xs md:text-sm lg:text-base">Democratize data and enable your team</p>
+            <div className="bg-indigo-200 rounded-xl p-6 flex flex-col justify-center text-black group relative overflow-hidden">
+              {/* Default content */}
+              <div className="flex flex-col justify-center group-hover:opacity-0 transition-opacity ease-in-out">
+                <BookMarked className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 mb-2" />
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">Teach and Empower</h3>
+                <p className="text-xs md:text-sm lg:text-base">Democratize data and enable your team</p>
+              </div>
+
+              {/* Hover overlay */}
+              <div className="absolute inset-0 flex flex-col justify-between px-4 md:px-6 py-4 rounded-xl
+                group-hover:opacity-100 opacity-0 transition-all duration-300 ease-in-out
+                bg-black/80 backdrop-blur-sm overflow-y-auto">
+                <div className="flex justify-between items-end">
+                  <div>
+                    <h3 className="text-xl md:text-xl lg:text-2xl font-bold mb-2 text-white">Teach & Empower</h3>
+                    <p className="text-sm md:text-base lg:text-lg mb-2 text-gray-200">
+                      Upskill business and technical teams
+                    </p>
+                    <ul className="space-y-2 mb-4">
+                      <li className="flex items-start gap-2 text-sm md:text-base text-gray-100">
+                        <span className="text-green-400">→</span>
+                        <span>Data literacy & SQL</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-sm md:text-base text-gray-100">
+                        <span className="text-green-400">→</span>
+                        <span>Modern data pipelines</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-sm md:text-base text-gray-100">
+                        <span className="text-green-400">→</span>
+                        <span>Product analytics</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-sm md:text-base text-gray-100">
+                        <span className="text-green-400">→</span>
+                        <span>Data storytelling</span>
+                      </li>
+                    </ul>
+                    <p className="text-xs md:text-sm text-gray-300">
+                      Half-day workshops tailored to your needs
+                    </p>
+                  </div>
+                  <button className=" px-4 py-2 bg-white text-black font-semibold rounded-md hover:bg-gray-100 transition-colors text-sm">
+                    Learn More →
+                  </button>
+                </div>
+
+              </div>
             </div>
 
             {/* Bottom right panel */}
-            <div className="bg-black rounded-xl p-6 flex flex-col justify-center text-white">
-              <Zap className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 mb-2" />
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">Consult and Transform</h3>
-              <p className="text-xs md:text-sm lg:text-base">Strategic guidance for data-driven decisions</p>
+            <div className="bg-emerald-700 rounded-xl p-6 flex flex-col justify-center text-white group relative overflow-hidden">
+              {/* Default content */}
+              <div className="flex flex-col justify-center group-hover:opacity-0 transition-opacity ease-in-out">
+                <Zap className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 mb-2" />
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">Consult and transform</h3>
+                <p className="text-xs md:text-sm lg:text-base">Strategic guidance and implementation for data-driven transformation</p>
+              </div>
+
+              {/* Hover overlay */}
+              <div className="absolute inset-0 flex flex-col justify-between px-4 md:px-6 py-4 rounded-xl
+                group-hover:opacity-100 opacity-0 transition-all duration-300 ease-in-out
+                bg-black/80 backdrop-blur-sm">
+                <div className="flex justify-between items-end">
+                  <div>
+                    <h3 className="text-xl md:text-xl lg:text-2xl font-bold mb-2 text-white">Consult & Transform</h3>
+                    <p className="text-sm md:text-base lg:text-lg mb-2 text-gray-200">
+                      Integrate data to make better decisions
+                    </p>
+                    <ul className="space-y-2 mb-4">
+                      <li className="flex items-start gap-2 text-sm md:text-base text-gray-100">
+                        <span className="text-green-400">→</span>
+                        <span>Strategic consulting & roadmaps</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-sm md:text-base text-gray-100">
+                        <span className="text-green-400">→</span>
+                        <span>Dashboards & database</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-sm md:text-base text-gray-100">
+                        <span className="text-green-400">→</span>
+                        <span>Data-driven transformation</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-sm md:text-base text-gray-100">
+                        <span className="text-green-400">→</span>
+                        <span>AI implementation & automation</span>
+                      </li>
+                    </ul>
+                    <p className="text-xs md:text-sm text-gray-300">
+                      project-based or ongoing advisory
+                    </p>
+                  </div>
+                  <button className="px-4 py-2 bg-white text-black font-semibold rounded-md hover:bg-gray-100 transition-colors text-sm">
+                    Learn More →
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -132,51 +261,64 @@ export default function Home() {
 
 
           <div className="w-full flex flex-col md:flex-row gap-6 md:gap-10 justify-center items-center">
+
+
             {projectsData.map((project, index) => (
-              <div key={project.name} className={`bg-white w-full md:w-100 sm:h-auto md:h-150 h-150 border-black-500 border-10 rounded p-6 flex flex-col gap-4 hover:shadow-2xl transition-shadow ${index == 0 ? "border-black" : "border-green-600"}`}
+              <div key={project.name} className="group perspective-1000 w-full md:w-100 h-150">
+                <div className="relative w-full h-full transition-transform duration-700 transform-style-3d group-hover:rotate-y-180">
 
-              >
-                {/* Logo and Name */}
-                <div className="flex items-center gap-4">
-                  <Image src={project.logo} alt={project.name} width={120} height={60} className="rounded" />
-                  <div>
-                    <h3 className="text-2xl font-bold">{project.name}</h3>
-                    <p className="text-sm text-purple-500 font-semibold">{project.tagline}</p>
+                  {/* FRONT - Logo and Color */}
+                  <div className={`absolute w-full h-full backface-hidden rounded-xl p-6 flex flex-col items-center justify-center gap-6 ${index === 0 ? "bg-black" : "bg-emerald-700"}`}>
+                    <Image src={project.logo} alt={project.name} width={200} height={90} className="rounded bg-white p-1" />
+                    <h3 className="text-3xl font-bold text-white text-center">{project.name}</h3>
+                    <p className="text-white text-center text-lg">{project.tagline}</p>
                   </div>
-                </div>
 
-                {/* Description */}
-                <p className="text-sm text-gray-700 line-clamp-4">{project.description}</p>
+                  {/* BACK - Full Details */}
+                  <div className={`absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-lg p-6 flex flex-col gap-4 overflow-y-auto border-4  ${index == 0 ? "border-black" : "border-emerald-700"}`}>
+                    {/* Logo and Name */}
+                    <div className="flex items-center gap-4">
+                      <Image src={project.logo} alt={project.name} width={150} height={40} className="rounded" />
+                      <div>
+                        <h3 className="text-xl font-bold">{project.name}</h3>
+                        <p className="text text-purple-500 font-semibold">{project.tagline}</p>
+                      </div>
+                    </div>
 
+                    {/* Description */}
+                    <p className="text-md text-gray-700 ">{project.description}</p>
 
+                    {/* Screenshot */}
+                    <div className="w-full flex justify-center">
+                      <Image src={project.screenshot} alt={project.name} width={290} height={120} className="rounded" />
+                    </div>
 
-                <div className="w-full flex justify-center">
-                  <Image src={project.screenshot} alt={project.name} width={350} height={160} className="rounded" />
-                </div>
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.slice(0, 4).map((tech) => (
-                    <span key={tech} className="px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">
-                      {tech}
-                    </span>
-                  ))}
-                  {project.tech.length > 4 && (
-                    <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
-                      +{project.tech.length - 4} more
-                    </span>
-                  )}
-                </div>
+                    {/* Tech Stack */}
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.slice(0, 4).map((tech) => (
+                        <span key={tech} className="px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">
+                          {tech}
+                        </span>
+                      ))}
+                      {project.tech.length > 4 && (
+                        <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                          +{project.tech.length - 4} more
+                        </span>
+                      )}
+                    </div>
 
-                {/* Links */}
-                <div className="flex gap-3 mt-auto">
-                  <Link href={project.links.github} target="_blank" className="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-sm">
-                    <Github className="w-4 h-4" />
-                    GitHub
-                  </Link>
-                  <Link href={project.links.sheet} target="_blank" className="flex items-center gap-2 px-4 py-2 border-2 border-purple-500 text-purple-500 rounded-lg hover:bg-purple-50 transition-colors text-sm">
-                    <FileText className="w-4 h-4" />
-                    Details
-                  </Link>
+                    {/* Links */}
+                    <div className="flex gap-3 mt-auto">
+                      <Link href={project.links.github} target="_blank" className="flex items-center gap-2 px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-xs">
+                        <Github className="w-3 h-3" />
+                        GitHub
+                      </Link>
+                      <Link href={project.links.sheet} target="_blank" className="flex items-center gap-2 px-3 py-2 border-2 border-purple-500 text-purple-500 rounded-lg hover:bg-purple-50 transition-colors text-xs">
+                        <FileText className="w-3 h-3" />
+                        Details
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -479,7 +621,12 @@ export default function Home() {
           <p>© {new Date().getFullYear()} Thomas Cottiaux. Building products that matter.</p>
         </div>
       </footer>
+
+
+
     </div>
+
+
 
 
 

@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 /* 
+
+
 ---break--- */
 @custom-variant dark (&:is(.dark *));
 
@@ -142,6 +144,16 @@ body {
   }
 }
 
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
 .markdown-content h1 {
   font-size: 2rem;
   font-weight: bold;

@@ -1,12 +1,20 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { Zap, Rocket, BookMarked, Github, FileText } from 'lucide-react';
-import Marquee from "react-fast-marquee";
-import projectsData from '../public/projects/project.json';
 
+import Link from "next/link";
+import { Zap, Rocket, BookMarked, Github, FileText, Lightbulb, Palette, Code2, TrendingUp } from 'lucide-react';
+
+import projectsData from '../public/projects/project.json';
+import { Bebas_Neue } from 'next/font/google'
+
+
+const bebas = Bebas_Neue({
+  weight: '400',
+  subsets: ['latin']
+})
 export default function Home() {
+
 
   return (
     <div className=" text-neutral-800 bg-white">
@@ -41,7 +49,7 @@ export default function Home() {
 
           <div className="pt-6 md:pt-10 pl-5 md:pl-10 lg:pl-20 flex flex-col">
             <span className="text-lg md:text-2xl lg:text-3xl">C R E A T I V E</span>
-            <span className="text-4xl md:text-6xl lg:text-8xl text-purple-500 font-bold">FULL STACK  <br></br>DEVELOPER</span>
+            <span className={`text-4xl md:text-6xl lg:text-9xl text-purple-500 ${bebas.className}`}>FULL STACK  <br></br>DEVELOPER</span>
             <span className="text-2xl md:text-3xl lg:text-4xl">& Data Consultant</span>
           </div>
 
@@ -66,16 +74,15 @@ export default function Home() {
 
       </div>
 
-      <div className="h-10 w-screen flex  items-center">
-        <Marquee speed={50} gradient={false}>
-          <span className="mx-30">MY OFFERS</span>
-          <span className="mx-30">LAUNCH YOUR IDEA</span>
-          <span className="mx-30">DEMOCRATIZE DATA</span>
-          <span className="mx-30">CONSULTING</span>
-          <span className="mx-30">DATA ENGINEERING</span>
-        </Marquee>
+      {/* <div className="h-10 w-screen flex justify-around items-center">
+        <span >MY OFFERS</span>
+        <span >LAUNCH YOUR IDEA</span>
+        <span >DEMOCRATIZE DATA</span>
+        <span >CONSULTING</span>
+        <span >DATA ENGINEERING</span>
 
-      </div>
+
+      </div> */}
 
       <section className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-200 ">
         <Image
@@ -113,15 +120,9 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="h-10 w-screen flex items-center  overflow-hidden">
-        <Marquee speed={50} gradient={false}>
-          <span className="mx-30">MY PROJECTS</span>
-          <span className="mx-30">MY PROJECTS</span>
-          <span className="mx-30">MY PROJECTS</span>
-          <span className="mx-30">MY PROJECTS</span>
-          <span className="mx-30">MY PROJECTS</span>
+      <div className="h-10 w-screen flex items-center justify-center  overflow-hidden">
+        <span className=""> -- PROJECTS -- </span>
 
-        </Marquee>
       </div>
 
       <section className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-200 ">
@@ -129,7 +130,7 @@ export default function Home() {
           src={"/LandingPage/land4.jpg"}
           fill
           alt="mountains"
-          className="object-cover object-bottom "
+          className="object-cover object-bottom  "
           priority
         />
         <div className="relative h-full flex w-screen items-center p-5 md:p-10">
@@ -185,27 +186,139 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="h-10 w-screen flex items-center  overflow-hidden">
-        <Marquee speed={50} gradient={false}>
-          <span className="mx-30">MY PROJECTS</span>
-          <span className="mx-30">MY PROJECTS</span>
-          <span className="mx-30">MY PROJECTS</span>
-          <span className="mx-30">MY PROJECTS</span>
-          <span className="mx-30">MY PROJECTS</span>
+      {/* <div className="w-screen h-4 bg-white"></div> */}
+      {/* <div className={` h-10 w-screen flex items-center justify-center  overflow-hidden text-2xl ${bebas.className}`}>
+        <span className=""> TECH   STACK </span>
 
-        </Marquee>
-      </div>
-      <section className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-200 ">
+      </div> */}
+
+      <section className="w-screen h-200 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] ">
         <Image
-          src={"/LandingPage/land5.jpg"}
+          src={"/LandingPage/land7.jpg"}
           fill
           alt="mountains"
-          className="object-cover object-bottom "
+          className="object-cover object-bottom"
           priority
         />
-      </section>
-      <div className="relative h-full flex w-screen items-center p-5 md:p-10">
-      </div>
+        <div className="absolute inset-0 bg-black/30 z-0"></div>
+
+        {/* Tech Stack & Skills Section - overlaid on image */}
+        <div className="relative z-10 h-full flex flex-col w-screen items-center justify-center p-10 md:p-20">
+
+
+          <div className="w-full flex justify-center gap-20  ">
+            {/* DEV Section - Left */}
+
+            <div className="flex justify-center items-center gap-3 bg-black rounded-2xl p-5">
+              <span className="text-3xl text-white"> TECH STACK <br />
+                <span className="text-4xl font-bold text-white">DEVELOPER</span></span>
+
+              <div className="py-5 w-90 min-w-90 bg-neutral-700 rounded-2xl max-h-150 overflow-y-auto scrollbar-hide">
+                <div className="flex flex-wrap gap-2 justify-center rounded " >
+                  {[
+                    { name: "TypeScript", icon: "typescript", local: false },
+                    { name: "React", icon: "react", local: false },
+                    { name: "Next.js", icon: "nextdotjs", local: false },
+                    { name: "Node.js", icon: "nodedotjs", local: false },
+                    { name: "Git", icon: "git", local: false },
+                    { name: "HTML/CSS", icon: "html5", local: false },
+                    { name: "Tailwind", icon: "tailwindcss", local: false },
+                    { name: "Prisma", icon: "prisma", local: false },
+                    { name: "Docker", icon: "docker", local: false },
+                    { name: "AWS", icon: "aws.svg", local: true },
+                    { name: "JavaScript", icon: "javascript", local: false },
+                    { name: "Vercel", icon: "vercel", local: false },
+                    { name: "Firebase", icon: "firebase", local: false },
+                    { name: "Express.js", icon: "express", local: false },
+                    { name: "MongoDB", icon: "mongodb", local: false },
+                    { name: "Vite", icon: "vite", local: false },
+                    { name: "Jest", icon: "jest", local: false },
+                    { name: "GitHub", icon: "github", local: false },
+                    { name: "Postman", icon: "postman", local: false },
+                    { name: "Figma", icon: "figma", local: false },
+                    { name: "GitLab", icon: "gitlab", local: false },
+                    { name: "Cypress", icon: "cypress", local: false },
+                    { name: "AWS EC2", icon: "aws-ec2.svg", local: true },
+                    { name: "DigitalOcean", icon: "digitalocean", local: false },
+                    { name: "Mural", icon: "mural", local: false },
+                    { name: "Miro", icon: "miro", local: false }
+                  ].map((tech) => (
+                    <div
+                      key={tech.name}
+                      className="  bg-white  text-black rounded-xl group
+                    w-25 h-25
+                   hover:scale-105 transition-all cursor-pointer flex flex-col items-center
+                   justify-center gap-2 shadow-xl  "
+
+                    >
+                      <img
+                        src={tech.local ? `/icons/${tech.icon}` : `https://cdn.simpleicons.org/${tech.icon}`}
+                        alt={tech.name}
+                        className="w-13 h-13 group-hover:opacity-15"
+                        onError={(e) => { e.currentTarget.style.display = 'none' }}
+                      />
+
+                      <span className="group-hover:opacity-100 opacity-0 text-xl font-bold transition-all ease-in-out absolute">{tech.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+
+            {/* DATA Section - Right */}
+            <div className="flex justify-center items-center gap-3 bg-indigo-950 rounded-2xl p-5">
+
+              <div className="py-5 w-90 min-w-90 bg-indigo-800 rounded-2xl max-h-150 overflow-y-auto scrollbar-hide">
+
+                <div className="flex flex-wrap gap-2 justify-center rounded " >
+                  {[
+                    { name: "Python", icon: "python", local: false },
+                    { name: "PostgreSQL", icon: "postgresql", local: false },
+                    { name: "R", icon: "r", local: false },
+                    { name: "SQL", icon: "mysql", local: false },
+                    { name: "dbt", icon: "dbt", local: false },
+                    { name: "Grafana", icon: "grafana", local: false },
+                    { name: "Power BI", icon: "microsoft-power-bi.svg", local: true },
+                    { name: "Tableau", icon: "tableau-icon.svg", local: true },
+                    { name: "Metabase", icon: "metabase", local: false },
+                    { name: "Kafka", icon: "apachekafka", local: false },
+                    { name: "Airbyte", icon: "airbyte", local: false },
+                    { name: "AWS S3", icon: "aws-s3.svg", local: true },
+                    { name: "BigQuery", icon: "googlebigquery", local: false },
+                    { name: "Redshift", icon: "aws-redshift.svg", local: true },
+                    { name: "AWS RDS", icon: "aws-rds.svg", local: true },
+                    { name: "Lambda", icon: "aws-lambda.svg", local: true },
+                    { name: "Azure", icon: "microsoft-azure.svg", local: true },
+                    { name: "PostHog", icon: "posthog", local: false },
+                    { name: "Mixpanel", icon: "mixpanel", local: false }
+                  ].map((tech) => (
+                    <div
+                      key={tech.name}
+                      className="px-4 py-2 bg-white text-black rounded-xl group
+                    w-25 h-25
+                   hover:scale-105 transition-all cursor-pointer flex flex-col items-center
+                   justify-center gap-2 shadow-xl"
+                    >
+                      <img
+                        src={tech.local ? `/icons/${tech.icon}` : `https://cdn.simpleicons.org/${tech.icon}`}
+                        alt={tech.name}
+                        className="w-13 h-13 group-hover:opacity-15"
+                        onError={(e) => { e.currentTarget.style.display = 'none' }}
+                      />
+
+                      <span className="group-hover:opacity-100 opacity-0 text-xl font-bold transition-all ease-in-out absolute">{tech.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <span className="text-3xl text-white"> TECH STACK <br />
+                <span className="text-4xl font-bold text-white">DATA</span></span>
+            </div>
+          </div>
+        </div >
+
+      </section >
 
     </div >
 

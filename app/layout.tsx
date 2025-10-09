@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Nunito, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -7,7 +7,10 @@ const nunito = Nunito({
   weight: ["300", "400", "600", "700"],
   variable: "--font-nunito",
 });
-
+const bebas = Bebas_Neue({
+  weight: '400',
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
   title: "KOTTIO Portofiolio",

@@ -20,7 +20,7 @@ export default function Home() {
     <div className=" text-neutral-800 bg-white">
       {/* ==================== HERO SECTION ==================== */}
       <div className="h-screen flex flex-col">
-        <div className="w-screen relative z-1 -mt-20 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-150">
+        <div className="w-screen relative z-1 -mt-20 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-32 sm:h-40 md:h-48 lg:h-150">
 
           <Image
             src={"/LandingPage/land1.jpg"}
@@ -34,11 +34,11 @@ export default function Home() {
           <div className="relative z-20 flex items-center justify-between h-full px-5 md:px-10 lg:px-20 -mt-10 ">
 
             <div className="flex items-center">
-              <Image src={"/face.png"} alt="face" height={60} width={60} className="md:h-[80px] md:w-[80px] lg:h-[100px] lg:w-[100px]" ></Image>
-              <span className="text-black z-20 text-2xl md:text-3xl lg:text-4xl " style={{ textShadow: '0px 1px 4px rgba(0,0,0,1)' }}> KOTTIO</span>
+              <Image src={"/face.png"} alt="face" height={40} width={40} className="sm:h-[50px] sm:w-[50px] md:h-[80px] md:w-[80px] lg:h-[100px] lg:w-[100px]" ></Image>
+              <span className="text-black z-20 text-xl sm:text-2xl md:text-2xl lg:text-4xl " style={{ textShadow: '0px 1px 4px rgba(0,0,0,1)' }}> KOTTIO</span>
             </div>
 
-            <ul className="flex justify-between gap-3 md:gap-6 lg:gap-0 lg:w-1/3 text-base md:text-xl lg:text-2xl">
+            <ul className="flex justify-between gap-2 sm:gap-3 md:gap-6 lg:gap-0 lg:w-1/3 text-sm sm:text-base md:text-xl lg:text-2xl">
               <li className="text-white hover:text-black transition-colors cursor-pointer" style={{ textShadow: '0px 1px 4px rgba(0,0,0,1)' }}>ABOUT</li>
               <li className="text-white hover:text-black transition-colors cursor-pointer" style={{ textShadow: '0px 1px 4px rgba(0,0,0,1)' }}>NOW</li>
               <li className="text-white hover:text-black transition-colors cursor-pointer" style={{ textShadow: '0px 1px 4px rgba(0,0,0,1)' }}>CONTACT</li>
@@ -46,17 +46,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute z-10 flex flex-col md:flex-row mt-20 md:mt-40 justify-between items-start md:items-end w-screen gap-8 md:gap-0">
+        <div className="absolute z-10 flex flex-col md:flex-row mt-12 sm:mt-16 md:mt-40 justify-between items-start md:items-end w-screen gap-4 sm:gap-6 md:gap-0">
 
-          <div className="pt-6 md:pt-10 pl-5 md:pl-10 lg:pl-20 flex flex-col">
+          <div className="pt-4 sm:pt-6 md:pt-10 pl-5 md:pl-10 lg:pl-20 flex flex-col">
             <span className="text-lg md:text-2xl lg:text-3xl">C R E A T I V E</span>
-            <span className={`text-4xl md:text-6xl lg:text-9xl text-purple-500 ${bebas.className}`}>FULL STACK  <br></br>DEVELOPER</span>
-            <span className="text-2xl md:text-3xl lg:text-4xl">& Data Consultant</span>
+            <span className={`text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-purple-500 ${bebas.className}`}>FULL STACK  <br></br>DEVELOPER</span>
+            <span className="text-2xl md:text-2xl lg:text-3xl">& Data Consultant</span>
           </div>
 
-          <div className="px-5 md:px-10 lg:px-20 flex flex-col md:flex-row gap-3 md:gap-5 w-full md:w-auto">
-            <div className="border-1 px-6 md:px-8 lg:px-10 py-3 flex justify-center items-center text-base md:text-xl lg:text-2xl rounded border-neutral-800"><span>MY OFFERS</span></div>
-            <div className="border-1 px-6 md:px-8 lg:px-10 py-3 flex justify-center items-center text-base md:text-xl lg:text-2xl bg-purple-500 text-white rounded"><span>MY PROJECTS</span></div>
+          <div className="px-5 md:px-10 lg:px-20 flex flex-col md:flex-row gap-2 sm:gap-3 md:gap-5 w-full md:w-auto">
+            <div className="border-1 px-4 sm:px-6 md:px-8 lg:px-10 py-2 sm:py-3 flex justify-center items-center text-sm sm:text-base md:text-xl lg:text-xl rounded border-neutral-800"><span>MY OFFERS</span></div>
+            <div className="border-1 px-4 sm:px-6 md:px-8 lg:px-10 py-2 sm:py-3 flex justify-center items-center text-sm sm:text-base md:text-xl lg:text-xl bg-purple-500 text-white rounded"><span>MY PROJECTS</span></div>
           </div>
         </div>
 
@@ -90,7 +90,7 @@ export default function Home() {
           <div className="bg-white/90 backdrop-blur-sm h-full w-full md:h-5/6 md:w-5/6 rounded-2xl p-2 md:p-4 grid grid-cols-2 grid-rows-2 gap-4">
 
             {/* Large left panel - spans 2 rows */}
-            <div className="row-span-2 bg-purple-500 rounded-xl p-6 flex text-white group relative overflow-hidden">
+            <div className="row-span-2 bg-violet-500 rounded-xl p-6 flex text-white group relative overflow-hidden">
 
               <div className=" flex flex-col justify-center group-hover:opacity-0  transition-opacity ease-in-out">
                 <Rocket className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 mb-4" />
@@ -185,7 +185,7 @@ export default function Home() {
                     </p>
                   </div>
                   <button className=" px-4 py-2 bg-white text-black font-semibold rounded-md hover:bg-gray-100 transition-colors text-sm">
-                    Learn More →
+                    Learn More
                   </button>
                 </div>
 
@@ -193,7 +193,7 @@ export default function Home() {
             </div>
 
             {/* Bottom right panel */}
-            <div className="bg-emerald-700 rounded-xl p-6 flex flex-col justify-center text-white group relative overflow-hidden">
+            <div className="bg-indigo-900 rounded-xl p-6 flex flex-col justify-center text-white group relative overflow-hidden">
               {/* Default content */}
               <div className="flex flex-col justify-center group-hover:opacity-0 transition-opacity ease-in-out">
                 <Zap className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 mb-2" />
@@ -234,7 +234,7 @@ export default function Home() {
                     </p>
                   </div>
                   <button className="px-4 py-2 bg-white text-black font-semibold rounded-md hover:bg-gray-100 transition-colors text-sm">
-                    Learn More →
+                    Learn More
                   </button>
                 </div>
               </div>

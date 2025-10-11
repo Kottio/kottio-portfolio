@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { trustedBy } from "@/lib/companies"
 import Marquee from "react-fast-marquee"
-import { bebas } from "@/app/page"
+import { bebas } from "@/lib/fonts"
 
 export default function TrustedBySection() {
   return (<><div className="h-auto w-screen flex flex-col items-center justify-center py-8 bg-white gap-2">

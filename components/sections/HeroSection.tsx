@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { bebas } from "@/app/page"
+import { bebas } from "@/lib/fonts"
 
 export default function HeroSection() {
   return <div className="h-screen flex flex-col">

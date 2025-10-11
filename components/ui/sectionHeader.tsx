@@ -1,4 +1,4 @@
-import { bebas } from "@/app/page"
+import { bebas } from "@/lib/fonts"
 interface headerProps {
   sectionName: string
   white: boolean

@@ -2,7 +2,6 @@
 
 
 
-import { Bebas_Neue } from 'next/font/google'
 
 
 import HeroSection from "@/components/sections/HeroSection";
@@ -14,10 +13,6 @@ import AboutSection from "@/components/sections/AboutSection";
 import PhotoCtaSection from "@/components/sections/PhotoCtaSection";
 import Footer from "@/components/sections/Footer";
 
-export const bebas = Bebas_Neue({
-  weight: '400',
-  subsets: ['latin']
-})
 
 
 export default function Home() {

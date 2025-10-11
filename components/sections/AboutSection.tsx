@@ -1,7 +1,7 @@
 import Image from "next/image"
 import SectionHeader from "../ui/sectionHeader"
 import { useState } from "react"
-import { bebas } from "@/app/page"
+import { bebas } from "@/lib/fonts"
 
 export default function AboutSection() {
   const [showAbout, setShowAbout] = useState(false)

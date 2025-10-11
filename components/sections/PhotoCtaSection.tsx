@@ -1,4 +1,4 @@
-import { bebas } from "@/app/page"
+import { bebas } from "@/lib/fonts"
 
 export default function PhotoCtaSection() {
   return (<div className="h-auto w-screen flex flex-col items-center justify-center py-8 bg-white gap-2">

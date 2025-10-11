@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { bebas } from "@/app/page"
+import { bebas } from "@/lib/fonts"
 import { Github } from "lucide-react"
 export default function Footer() {
   return (<footer className="w-screen bg-black text-white py-10 px-5 md:px-10 lg:px-20">

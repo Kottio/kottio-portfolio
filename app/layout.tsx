@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.kottio.dev",
     title: "THOMAS COTTIAUX | FullStack Developer",
-    description: "FullStack Freelance Developer",
+    description: "FullStack Freelance Developer specializing in React, Next.js, Python, AI integration, and data-driven transformation.",
     images: [{
       url: "https://www.kottio.dev/OgImage.png",
       width: 1200,

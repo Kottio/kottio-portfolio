@@ -6,11 +6,11 @@ import { bebas } from "@/lib/fonts"
 export default function AboutSection() {
   const [showAbout, setShowAbout] = useState(false)
 
-  return (<section className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-220 lg:h-190  xl:h-200 2xl:h-220">
+  return (<section id="about" className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-220 lg:h-190  xl:h-200 2xl:h-220">
     <Image
       src={"/LandingPage/land6.jpg"}
       fill
-      alt="mountains"
+      alt="About me section background"
       className="object-cover object-bottom  "
       priority
     />
@@ -62,7 +62,7 @@ export default function AboutSection() {
           src={"/LandingPage/photomoi2.jpg"}
           width={400}
           height={400}
-          alt="photoTom"
+          alt="Thomas Cottiaux professional portrait"
           className="rounded grayscale hover:grayscale-0 transition-all h-auto w-auto max-h-[400px]"
         ></Image>
       </div>

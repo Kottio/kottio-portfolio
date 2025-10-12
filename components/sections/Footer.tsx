@@ -7,7 +7,7 @@ export default function Footer() {
       {/* Left - About */}
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-3">
-          <Image src={"/face.png"} alt="face" height={50} width={50} className="bg-white rounded-3xl" />
+          <Image src={"/face.png"} alt="Thomas Cottiaux logo | KOTTIO logo" height={50} width={50} className="bg-white rounded-3xl" />
           <span className={`${bebas.className} text-3xl `}>KOTTIO</span>
         </div>
         <p className="text-sm text-gray-400">

@@ -1,9 +1,5 @@
 "use client";
 
-
-
-
-
 import HeroSection from "@/components/sections/HeroSection";
 import OffersSection from "@/components/sections/OffersSection";
 import ProjectSection from "@/components/sections/ProjectsSection";
@@ -14,30 +10,23 @@ import PhotoCtaSection from "@/components/sections/PhotoCtaSection";
 import Footer from "@/components/sections/Footer";
 
 
-
 export default function Home() {
-  return (
-    <section className=" text-neutral-800 bg-white">
+  return (<>
 
-      <HeroSection></HeroSection>
-
+    <HeroSection></HeroSection>
+    <main>
       <OffersSection></OffersSection>
-
       <ProjectSection></ProjectSection>
-
       <StackSection></StackSection>
-
       <AboutSection></AboutSection>
-
       <TrustedBySection></TrustedBySection>
-
       <PhotoCtaSection></PhotoCtaSection>
+    </main>
+    <Footer></Footer>
 
-      <Footer></Footer>
+  </>
 
 
-
-    </section>
 
 
 

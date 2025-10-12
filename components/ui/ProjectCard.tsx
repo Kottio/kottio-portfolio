@@ -9,7 +9,7 @@ interface ProjectCardProps {
 }
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
-    <div className="group perspective-1000 w-full md:w-100 xl:h-140 lg:h-130 2xl:h-150">
+    <article className="group perspective-1000 w-full md:w-100 xl:h-140 lg:h-130 2xl:h-150">
       <div className="relative w-full h-full transition-transform duration-700 transform-style-3d group-hover:rotate-y-180">
         {/* FRONT - Logo and Color */}
         <div className={`absolute w-full h-full backface-hidden rounded-xl p-6 flex flex-col items-center justify-center gap-6 ${index === 0 ? "bg-black" : "bg-emerald-700"}`}>
@@ -61,5 +61,5 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
         </div>
       </div>
-    </div>)
+    </article>)
 }

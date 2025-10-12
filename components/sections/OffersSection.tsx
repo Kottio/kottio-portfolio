@@ -5,12 +5,12 @@ import { Rocket, BookMarked, Zap } from "lucide-react"
 export default function OffersSection() {
   return (
 
-    <section className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-200 ">
+    <section id="offers" className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-200 ">
       <Image
         src={"/LandingPage/land3.jpg"}
 
         fill
-        alt="mountains"
+        alt="Services and offers background"
         className="object-cover object-bottom "
         priority
       />

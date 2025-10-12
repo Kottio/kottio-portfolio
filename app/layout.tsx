@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito, Bebas_Neue } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -7,10 +7,7 @@ const nunito = Nunito({
   weight: ["300", "400", "600", "700"],
   variable: "--font-nunito",
 });
-const bebas = Bebas_Neue({
-  weight: '400',
-  subsets: ['latin']
-})
+
 
 export const metadata: Metadata = {
   title: {
@@ -46,7 +43,6 @@ export const metadata: Metadata = {
 };
 
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -55,8 +51,35 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.variable} antialiased`}      >
+        className={`${nunito.variable} antialiased text-neutral-800 bg-white`}      >
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Thomas Cottiaux",
+              "jobTitle": "Full Stack Developer & Data Consultant",
+              "url": "https://www.kottio.dev",
+              "sameAs": [
+                "https://github.com/Kottio",
+                "https://www.linkedin.com/in/thomas-cottiaux-9160aa175/"
+              ],
+              "knowsAbout": [
+                "React",
+                "Next.js",
+                "TypeScript",
+                "Python",
+                "Data Analytics",
+                "PostgreSQL",
+                "AI Integration"
+              ],
+              "description": "FullStack Freelance Developer specializing in React, Next.js, Python, AI integration, and data-driven transformation.",
+              "image": "https://www.kottio.dev/face.png"
+            })
+          }}
+        />
       </body>
     </html>
   );

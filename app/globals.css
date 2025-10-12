@@ -53,6 +53,10 @@
   }
 } */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Avenir, Nunito, Roboto, Arial;
   overflow-x: hidden;

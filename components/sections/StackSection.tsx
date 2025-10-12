@@ -4,11 +4,11 @@ import SectionHeader from "../ui/sectionHeader"
 import { techStackData, techStackDev } from "@/lib/techStack"
 
 export default function StackSection() {
-  return (<section className="w-screen  relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] lg:h-190  xl:h-200 2xl:h-220 ">
+  return (<section id="tech-stack" className="w-screen  relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] lg:h-190  xl:h-200 2xl:h-220 ">
     <Image
       src={"/LandingPage/land7.jpg"}
       fill
-      alt="mountains"
+      alt="Technology stack section background"
       className="object-cover object-bottom"
       priority
     />

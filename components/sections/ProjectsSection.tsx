@@ -8,11 +8,11 @@ export default function ProjectSection() {
 
 
   return (
-    <section className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]  lg:h-190  xl:h-200 2xl:h-220 ">
+    <section id="projects" className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]  lg:h-190  xl:h-200 2xl:h-220 ">
       <Image
         src={"/LandingPage/land4.jpg"}
         fill
-        alt="mountains"
+        alt="Projects showcase background"
         className="object-cover object-bottom  "
         priority
       />

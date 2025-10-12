@@ -4,16 +4,16 @@ import Marquee from "react-fast-marquee"
 import { bebas } from "@/lib/fonts"
 
 export default function TrustedBySection() {
-  return (<><div className="h-auto w-screen flex flex-col items-center justify-center py-8 bg-white gap-2">
+  return (<section id="trusted-by"><div className="h-auto w-screen flex flex-col items-center justify-center py-8 bg-white gap-2">
     <h3 className={`${bebas.className} text-4xl tracking-wider`}>THEY TRUSTED ME</h3>
     <div className="w-20 h-1 bg-purple-500"></div>
   </div>
 
-    <section className="w-screen h-55 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] ">
+    <div className="w-screen h-55 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] ">
       <Image
         src={"/LandingPage/land5.jpg"}
         fill
-        alt="mountains"
+        alt="Client testimonials background"
         className="object-cover object-center"
         priority
       />
@@ -35,6 +35,6 @@ export default function TrustedBySection() {
       </div>
 
 
-    </section>
-  </>)
+    </div>
+  </section>)
 }

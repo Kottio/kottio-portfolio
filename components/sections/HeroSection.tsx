@@ -103,7 +103,7 @@ export default function HeroSection() {
         </nav>
       </div>
     )}
-    <div className="  absolute z-10 flex flex-col md:flex-row  mt-40 md:mt-35 xl:mt-45 justify-between items-start md:items-end w-screen gap-10 md:gap-0">
+    <div className="  absolute z-10 flex flex-col md:flex-row  mt-40 md:mt-35 2xl:mt-45 justify-between items-start md:items-end w-screen gap-10 md:gap-0">
 
       <div className="pt-3 sm:pt-6 md:pt-5 pl-5 md:pl-10 lg:pl-20  flex flex-col ">
         <span className="text-lg   md:text-2xl lg:text-3xl">C R E A T I V E</span>

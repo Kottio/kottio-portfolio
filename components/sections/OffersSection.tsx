@@ -5,7 +5,7 @@ import { Rocket, BookMarked, Zap } from "lucide-react"
 export default function OffersSection() {
   return (
 
-    <section id="offers" className="w-screen relative  left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-200 ">
+    <section id="offers" className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-screen md:h-200 py-10 md:py-0">
       <Image
         src={"/LandingPage/land3.jpg"}
 
@@ -19,15 +19,18 @@ export default function OffersSection() {
       <SectionHeader sectionName="My Offers" white ></SectionHeader>
 
 
-      <div className="relative z-20 w-full h-full flex justify-center items-center p-2 md:p-10">
-        <div className="bg-white/90 backdrop-blur-sm h-full w-full md:h-5/6 md:w-5/6 rounded-2xl p-2 md:p-4 grid grid-cols-2 grid-rows-2 gap-4">
-          {/* Large left panel - spans 2 rows */}
-          <div className="row-span-2 bg-violet-500 rounded-xl p-6 flex text-white group relative overflow-hidden">
+      <div className="relative z-20 w-full h-full flex justify-center items-center p-4 pt-20 md:p-10">
+        <div className="bg-white/90 backdrop-blur-sm h-auto md:h-5/6 w-full md:w-5/6 rounded-2xl p-4 
+        grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-4">
+
+
+          {/* Large left panel - spans 2 rows on desktop, 1 row on mobile */}
+          <div className="md:row-span-2 bg-violet-500 rounded-xl p-4 md:p-6 flex text-white group relative overflow-hidden  md:min-h-0">
 
             <div className=" flex flex-col justify-center group-hover:opacity-0  transition-opacity ease-in-out">
               <Rocket className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 mb-4" />
-              <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">Build Your <br />Digital Product </h3>
-              <p className="text-xl md:text-base lg:text-lg">App / Web App, Tested Prototypes, Landing Page, Data Products </p>
+              <h3 className="text-xl md:text-4xl lg:text-5xl font-bold mb-4">Build Your <br className="md:block hidden" />Digital Product </h3>
+              <p className="text-sm md:text-base lg:text-lg">App / Web App, Tested Prototypes, Landing Page, Data Products </p>
             </div>
 
             <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-8 lg:px-12 rounded-xl
@@ -76,7 +79,7 @@ export default function OffersSection() {
 
 
           {/* Top right panel */}
-          <div className="bg-indigo-200 rounded-xl p-6 flex flex-col justify-center text-black group relative overflow-hidden">
+          <div className="bg-indigo-200 rounded-xl p-4 md:p-6 flex flex-col justify-center text-black group relative overflow-hidden min-h-[200px] md:min-h-0">
             {/* Default content */}
             <div className="flex flex-col justify-center group-hover:opacity-0 transition-opacity ease-in-out">
               <BookMarked className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 mb-2" />
@@ -125,7 +128,7 @@ export default function OffersSection() {
           </div>
 
           {/* Bottom right panel */}
-          <div className="bg-indigo-900 rounded-xl p-6 flex flex-col justify-center text-white group relative overflow-hidden">
+          <div className="bg-indigo-900 rounded-xl p-4 md:p-6 flex flex-col justify-center text-white group relative overflow-hidden min-h-[200px] md:min-h-0">
             {/* Default content */}
             <div className="flex flex-col justify-center group-hover:opacity-0 transition-opacity ease-in-out">
               <Zap className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 mb-2" />

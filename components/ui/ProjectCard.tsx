@@ -9,33 +9,33 @@ interface ProjectCardProps {
 }
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
-    <article className="group perspective-1000 w-full md:w-100 xl:h-140 lg:h-130 2xl:h-150">
+    <article className="group perspective-1000 w-full md:w-100 h-[300px] md:h-[500px] xl:h-140 lg:h-130 2xl:h-150">
       <div className="relative w-full h-full transition-transform duration-700 transform-style-3d group-hover:rotate-y-180">
         {/* FRONT - Logo and Color */}
-        <div className={`absolute w-full h-full backface-hidden rounded-xl p-6 flex flex-col items-center justify-center gap-6 ${index === 0 ? "bg-black" : "bg-emerald-700"}`}>
-          <Image src={project.logo} alt={project.name} width={200} height={90} className="rounded bg-white p-1" />
-          <h3 className="text-3xl font-bold text-white text-center">{project.name}</h3>
-          <p className="text-white text-center text-lg">{project.tagline}</p>
+        <div className={`absolute w-full h-full backface-hidden rounded-xl p-4 md:p-6 flex flex-col items-center justify-center gap-4 md:gap-6 ${index === 0 ? "bg-black" : "bg-emerald-700"}`}>
+          <Image src={project.logo} alt={project.name} width={200} height={90} className="rounded bg-white p-1 w-[150px] h-auto md:w-[200px]" />
+          <h3 className="text-2xl md:text-3xl font-bold text-white text-center">{project.name}</h3>
+          <p className="text-white text-center text-base md:text-lg">{project.tagline}</p>
         </div>
         {/* BACK - Full Details */}
-        <div className={`absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-lg p-6 flex flex-col  lg:gap-2 xl:gap-5 overflow-y-auto border-4  ${index === 0 ? "border-black" : "border-emerald-700"}`}>
+        <div className={`absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-lg p-4 md:p-6 flex flex-col gap-2 lg:gap-2 xl:gap-5 overflow-y-auto border-4 ${index === 0 ? "border-black" : "border-emerald-700"}`}>
           {/* Logo and Name */}
-          <div className="flex items-center gap-4">
-            <Image src={project.logo} alt={project.name} width={150} height={40} className="rounded lg:scale-80 scale-100" />
+          <div className="flex items-center gap-2 md:gap-4">
+            <Image src={project.logo} alt={project.name} width={150} height={40} className="rounded w-[100px] h-auto md:w-[150px] lg:w-[120px]" />
             <div>
-              <h3 className="text-xl font-bold">{project.name}</h3>
-              <p className="text text-purple-500 font-semibold">{project.tagline}</p>
+              <h3 className="text-base md:text-xl font-bold">{project.name}</h3>
+              <p className="text-xs md:text-sm text-purple-500 font-semibold">{project.tagline}</p>
             </div>
           </div>
           {/* Description */}
-          <p className="xl:text-md lg:text-sm text-gray-700 ">{project.description}</p>
+          <p className="text-xs md:text-sm xl:text-md text-gray-700">{project.description}</p>
           {/* Screenshot */}
           <div className="w-full flex justify-center">
-            <Image src={project.screenshot} alt={project.name} width={290} height={120} className="rounded" />
+            <Image src={project.screenshot} alt={project.name} width={290} height={120} className="rounded w-[250px] h-auto md:w-[290px]" />
           </div>
 
           {/* Tech Stack */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1 md:gap-2">
             {project.tech.slice(0, 4).map((tech) => (
               <span key={tech} className="px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">
                 {tech}
@@ -49,12 +49,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
 
           {/* Links */}
-          <div className="flex gap-3 mt-auto">
-            <Link href={project.links.github} target="_blank" className="flex items-center gap-2 px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-xs">
+          <div className="flex gap-2 md:gap-3 mt-auto">
+            <Link href={project.links.github} target="_blank" className="flex items-center gap-1 md:gap-2 px-2 md:px-3 py-1 md:py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-xs">
               <Github className="w-3 h-3" />
               GitHub
             </Link>
-            <Link href={project.links.sheet} target="_blank" className="flex items-center gap-2 px-3 py-2 border-2 border-purple-500 text-purple-500 rounded-lg hover:bg-purple-50 transition-colors text-xs">
+            <Link href={project.links.sheet} target="_blank" className="flex items-center gap-1 md:gap-2 px-2 md:px-3 py-1 md:py-2 border-2 border-purple-500 text-purple-500 rounded-lg hover:bg-purple-50 transition-colors text-xs">
               <FileText className="w-3 h-3" />
               Details
             </Link>

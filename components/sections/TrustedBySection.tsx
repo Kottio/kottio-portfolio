@@ -22,12 +22,13 @@ export default function TrustedBySection() {
       <div className="relative w-full h-full flex items-center justify-center">
         <Marquee speed={50} gradient={false}>
           {trustedBy.map((item) => (
-            <div key={item.name} className="mx-30">
+            <div key={item.name} className="mx-10 md:mx-30">
               <Image
                 src={item.logo}
                 width={180}
                 height={100}
                 alt={item.name}
+                className="w-[120px] h-auto md:w-[180px]"
               />
             </div>
           ))}

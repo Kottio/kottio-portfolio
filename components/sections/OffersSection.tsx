@@ -68,8 +68,9 @@ export default function OffersSection() {
               </ul>
 
               {/* CTA */}
-              <button className="self-start px-6 py-2 bg-white text-black font-semibold 
-                 rounded-md hover:bg-gray-100 transition-colors">
+              <button
+                className="self-start px-6 py-2 bg-white text-black font-semibold rounded-md hover:bg-gray-100 transition-colors"
+                aria-label="Learn more about building your digital product">
                 Learn More →
               </button>
             </div>
@@ -119,7 +120,9 @@ export default function OffersSection() {
                     Half-day workshops tailored to your needs
                   </p>
                 </div>
-                <button className=" px-4 py-2 bg-white text-black font-semibold rounded-md hover:bg-gray-100 transition-colors text-sm">
+                <button
+                  className="px-4 py-2 bg-white text-black font-semibold rounded-md hover:bg-gray-100 transition-colors text-sm"
+                  aria-label="Learn more about teaching and empowering your team">
                   Learn More
                 </button>
               </div>
@@ -168,7 +171,9 @@ export default function OffersSection() {
                     project-based or ongoing advisory
                   </p>
                 </div>
-                <button className="px-4 py-2 bg-white text-black font-semibold rounded-md hover:bg-gray-100 transition-colors text-sm">
+                <button
+                  className="px-4 py-2 bg-white text-black font-semibold rounded-md hover:bg-gray-100 transition-colors text-sm"
+                  aria-label="Learn more about consulting and data transformation">
                   Learn More
                 </button>
               </div>

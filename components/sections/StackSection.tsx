@@ -10,6 +10,7 @@ export default function StackSection() {
       fill
       alt="Technology stack section background"
       className="object-cover object-bottom"
+      quality={85}
       priority
     />
     <div className="absolute inset-0 bg-black/40 z-0"></div>

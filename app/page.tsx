@@ -6,7 +6,8 @@ import ProjectSection from "@/components/sections/ProjectsSection";
 import StackSection from "@/components/sections/StackSection";
 import TrustedBySection from "@/components/sections/TrustedBySection";
 import AboutSection from "@/components/sections/AboutSection";
-import PhotoCtaSection from "@/components/sections/PhotoCtaSection";
+// import PhotoCtaSection from "@/components/sections/PhotoCtaSection";
+import TechnicalSection from "@/components/sections/TechnicalSection";
 import Footer from "@/components/sections/Footer";
 
 
@@ -20,7 +21,8 @@ export default function Home() {
       <StackSection></StackSection>
       <AboutSection></AboutSection>
       <TrustedBySection></TrustedBySection>
-      <PhotoCtaSection></PhotoCtaSection>
+      {/* <PhotoCtaSection></PhotoCtaSection> */}
+      <TechnicalSection></TechnicalSection>
     </main>
     <Footer></Footer>
 

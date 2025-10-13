@@ -8,10 +8,10 @@ export default function OffersSection() {
     <section id="offers" className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-screen md:h-200 py-10 md:py-0">
       <Image
         src={"/LandingPage/land3.jpg"}
-
         fill
         alt="Services and offers background"
-        className="object-cover object-bottom "
+        className="object-cover object-bottom"
+        quality={85}
         priority
       />
 
@@ -25,7 +25,7 @@ export default function OffersSection() {
 
 
           {/* Large left panel - spans 2 rows on desktop, 1 row on mobile */}
-          <div className="md:row-span-2 bg-violet-500 rounded-xl p-4 md:p-6 flex text-white group relative overflow-hidden  md:min-h-0">
+          <div className="md:row-span-2 bg-violet-700 rounded-xl p-4 md:p-6 flex text-white group relative overflow-hidden  md:min-h-0">
 
             <div className=" flex flex-col justify-center group-hover:opacity-0  transition-opacity ease-in-out">
               <Rocket className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 mb-4" />

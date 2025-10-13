@@ -14,7 +14,8 @@ export default function HeroSection() {
         src={"/LandingPage/land1.jpg"}
         fill
         alt="Landing page hero image"
-        className="object-cover "
+        className="object-cover"
+        quality={85}
         priority />
 
       <div className="relative z-20 h-full px-5 md:px-20 -mt-10 flex items-center justify-between  bg-white/50">
@@ -120,7 +121,7 @@ export default function HeroSection() {
         </a>
         <a
           href="#projects"
-          className="border-1 px-6 md:px-8 lg:px-10 py-3 flex justify-center items-center text-base md:text-xl lg:text-xl bg-purple-500 text-white rounded hover:bg-purple-600 transition-colors cursor-pointer"
+          className="border-1 px-6 md:px-8 lg:px-10 py-3 flex justify-center items-center text-base md:text-xl lg:text-xl bg-purple-800 text-white  rounded hover:bg-purple-600 transition-colors cursor-pointer"
         >
           <span>MY PROJECTS</span>
         </a>
@@ -133,6 +134,7 @@ export default function HeroSection() {
         fill
         alt="Mountain landscape background"
         className="object-cover object-center md:object-bottom"
+        quality={85}
         priority
       />
     </div>

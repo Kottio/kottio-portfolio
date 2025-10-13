@@ -11,7 +11,8 @@ export default function AboutSection() {
       src={"/LandingPage/land6.jpg"}
       fill
       alt="About me section background"
-      className="object-cover object-bottom  "
+      className="object-cover object-bottom"
+      quality={85}
       priority
     />
     <SectionHeader sectionName="ABOUT ME" white ></SectionHeader>
@@ -20,7 +21,7 @@ export default function AboutSection() {
 
     <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-    <div className="relative z-10 h-full w-screen flex justify-center items-center  pt-15 md:pt-10 md:pt-20 px-4 md:px-0">
+    <div className="relative z-10 h-full w-screen flex justify-center items-center  pt-15  md:pt-20 px-4 md:px-0">
       <div className="flex flex-col md:flex-row h-auto w-full max-w-250 justify-center items-center gap-6 md:gap-10">
         <div className="text-white w-full md:max-w-150 flex flex-col">
 

@@ -6,6 +6,7 @@ const nunito = Nunito({
   subsets: ["latin"],
   weight: ["300", "400", "600", "700"],
   variable: "--font-nunito",
+  display: "swap",
 });
 
 

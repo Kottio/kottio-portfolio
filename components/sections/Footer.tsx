@@ -10,7 +10,7 @@ export default function Footer() {
           <Image src={"/face.png"} alt="Thomas Cottiaux logo | KOTTIO logo" height={50} width={50} className="bg-white rounded-3xl" />
           <span className={`${bebas.className} text-3xl `}>KOTTIO</span>
         </div>
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-gray-300">
           Full Stack Developer & Data Consultant helping creative entrepreneurs
           turn ambitious ideas into digital realities.
         </p>
@@ -19,18 +19,18 @@ export default function Footer() {
       {/* Center - Quick Links */}
       <div className="flex flex-col gap-4">
         <h3 className={`${bebas.className} text-2xl`}>Quick Links</h3>
-        <ul className="flex flex-col gap-2 text-sm text-gray-400">
-          <li><a href="#about" className="hover:text-purple-500 transition-colors">About</a></li>
-          <li><a href="#projects" className="hover:text-purple-500 transition-colors">Projects</a></li>
-          <li><a href="#tech-stack" className="hover:text-purple-500 transition-colors">Tech Stack</a></li>
-          <li><a href="#contact" className="hover:text-purple-500 transition-colors">Contact</a></li>
+        <ul className="flex flex-col gap-2 text-sm text-gray-300">
+          <li><a href="#about" className="hover:text-purple-400 transition-colors">About</a></li>
+          <li><a href="#projects" className="hover:text-purple-400 transition-colors">Projects</a></li>
+          <li><a href="#tech-stack" className="hover:text-purple-400 transition-colors">Tech Stack</a></li>
+          <li><a href="#contact" className="hover:text-purple-400 transition-colors">Contact</a></li>
         </ul>
       </div>
 
       {/* Right - Contact */}
       <div className="flex flex-col gap-4">
         <h3 className={`${bebas.className} text-2xl`}>Get In Touch</h3>
-        <div className="flex flex-col gap-2 text-sm text-gray-400">
+        <div className="flex flex-col gap-2 text-sm text-gray-300">
           <a href="mailto:thomas.cottiaux@example.com" className="hover:text-purple-500 transition-colors">
             thomas.cottiaux@gmail.com
           </a>
@@ -59,7 +59,7 @@ export default function Footer() {
     </div>
 
     {/* Bottom Bar */}
-    <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+    <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
       <p>© {new Date().getFullYear()} Thomas Cottiaux. Building products that matter.</p>
     </div>
   </footer>)

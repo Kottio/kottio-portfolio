@@ -14,6 +14,7 @@ export default function ProjectSection() {
         fill
         alt="Projects showcase background"
         className="object-cover object-bottom"
+        quality={85}
         priority
       />
       <SectionHeader sectionName="My projects" white={false} ></SectionHeader>

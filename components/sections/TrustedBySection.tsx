@@ -15,6 +15,7 @@ export default function TrustedBySection() {
         fill
         alt="Client testimonials background"
         className="object-cover object-center"
+        quality={85}
         priority
       />
       <div className="absolute inset-0 bg-white/75"></div>

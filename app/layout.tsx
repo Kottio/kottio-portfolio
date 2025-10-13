@@ -56,6 +56,36 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            console.log('%c👋 Hey Developer!', 'font-size: 24px; font-weight: bold; color: #8b5cf6;');
+            console.log('%c╔═══════════════════════════════════════════╗', 'color: #8b5cf6;');
+            console.log('%c║                                           ║', 'color: #8b5cf6;');
+            console.log('%c║    Looking for something? 🔍              ║', 'color: #8b5cf6;');
+            console.log('%c║                                           ║', 'color: #8b5cf6;');
+            console.log('%c║    Built with:                            ║', 'color: #8b5cf6;');
+            console.log('%c║    • Next.js 15                           ║', 'color: #8b5cf6;');
+            console.log('%c║    • React 19                             ║', 'color: #8b5cf6;');
+            console.log('%c║    • TypeScript                           ║', 'color: #8b5cf6;');
+            console.log('%c║    • Tailwind CSS                         ║', 'color: #8b5cf6;');
+            console.log('%c║                                           ║', 'color: #8b5cf6;');
+            console.log('%c║    Lighthouse Scores:                     ║', 'color: #8b5cf6;');
+            console.log('%c║    ⚡ Performance: 99/100                 ║', 'color: #10b981;');
+            console.log('%c║    🏆 Accessibility: 96/100               ║', 'color: #10b981;');
+            console.log('%c║    🛡️  Best Practices: 100/100            ║', 'color: #10b981;');
+            console.log('%c║    🌐 SEO: 100/100                        ║', 'color: #10b981;');
+            console.log('%c║                                           ║', 'color: #8b5cf6;');
+            console.log('%c║    Let\\'s work together! 🚀               ║', 'color: #8b5cf6;');
+            console.log('%c║    📧 thomas.cottiaux@gmail.com          ║', 'color: #8b5cf6;');
+            console.log('%c║    💼 github.com/Kottio                   ║', 'color: #8b5cf6;');
+            console.log('%c║                                           ║', 'color: #8b5cf6;');
+            console.log('%c╚═══════════════════════════════════════════╝', 'color: #8b5cf6;');
+            console.log('');
+            console.log('%cPsst... The code is clean, semantic, and accessible. Feel free to explore! 😉', 'font-style: italic; color: #6b7280;');
+          `
+        }} />
+      </head>
       <body
         className={`${nunito.variable} antialiased text-neutral-800 bg-white`}      >
         {children}

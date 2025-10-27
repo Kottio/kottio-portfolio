@@ -22,7 +22,7 @@ export default function Home() {
       <AboutSection></AboutSection>
       <TrustedBySection></TrustedBySection>
       {/* <PhotoCtaSection></PhotoCtaSection> */}
-      <TechnicalSection></TechnicalSection>
+      {/* <TechnicalSection></TechnicalSection> */}
     </main>
     <Footer></Footer>
 

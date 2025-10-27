@@ -37,7 +37,7 @@ export default function HeroSection() {
 
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden absolute right-5 text-purple-900 p-2 rounded border-2 border-purple-900 bg-white"
+          className="md:hidden absolute right-5 text-black p-2 rounded border-1 border-black/30 bg-white"
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
@@ -64,17 +64,19 @@ export default function HeroSection() {
         {/* Menu items - centered */}
         <nav className="flex-1 flex items-center justify-center">
           <ul className="flex flex-col gap-8 text-white text-3xl text-center  items-center justify-center ">
-
-
             <li>
               <a
-                href="#about"
+                href="/projects/mapshot"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block hover:text-purple-500 transition-colors"
               >
-                ABOUT
+                MAPSHOT
               </a>
             </li>
+
+
+
+
             <li>
               <a
                 href="#projects"
@@ -82,6 +84,15 @@ export default function HeroSection() {
                 className="block hover:text-purple-500 transition-colors"
               >
                 NOW
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block hover:text-purple-500 transition-colors"
+              >
+                ABOUT
               </a>
             </li>
             <li>
@@ -104,26 +115,26 @@ export default function HeroSection() {
         </nav>
       </div>
     )}
-    <div className="  absolute z-10 flex flex-col md:flex-row  mt-40 md:mt-35 2xl:mt-45 justify-between items-start md:items-end w-screen gap-10 md:gap-0">
+    <div className="  absolute z-10 flex flex-col md:flex-row  mt-40 md:mt-45 2xl:mt-45 justify-between items-start md:items-end w-screen gap-10 md:gap-0">
 
       <div className="pt-3 sm:pt-6 md:pt-5 pl-5 md:pl-10 lg:pl-20  flex flex-col ">
-        <span className="text-lg   md:text-2xl lg:text-3xl">C R E A T I V E</span>
-        <h1 className={`text-6xl md:text-6xl lg:text-8xl xl:text-9xl text-purple-500 xl:leading-28 ${bebas.className} line-he`}>FULL STACK  <br></br>DEVELOPER</h1>
-        <span className="text-2xl md:text-2xl lg:text-3xl xl:text-4xl ">& Data Consultant</span>
+        <span className="text-lg md:text-2xl lg:text-3xl">Hey, I'm Thomas 👋</span>
+        <h1 className={`text-5xl md:text-6xl lg:text-8xl xl:text-9xl text-black xl:leading-tight ${bebas.className}`}> Solo Developer</h1>
+        <span className="text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-relaxed">Building <span className="font-bold      
+ text-purple-600">creative projects</span> with  <span className="font-bold text-purple-600">advanced analytics</span></span>
       </div>
-
-      <div className="px-5 md:px-10 lg:px-20 flex flex-col md:flex-row gap-2 sm:gap-3 md:gap-5 w-full md:w-auto">
+      <div className="px-5 md:px-10 lg:px-20 flex flex-col md:flex-row gap-3 md:gap-4 w-full md:w-auto">
         <a
           href="#offers"
-          className="border-1 px-6 md:px-8 lg:px-10 py-3 flex justify-center items-center text-base md:text-xl lg:text-xl rounded border-neutral-800 hover:bg-gray-100 1transition-colors cursor-pointer"
+          className="px-8 py-4 text-lg font-bold rounded-xl bg-white/90 backdrop-blur-sm text-gray-900 border-1 border-gray-600 hover:bg-gray-900 hover:text-white transition-all transform hover:scale-105 active:scale-95 text-center shadow-md"
         >
-          <span>MY OFFERS</span>
+          What I Offer
         </a>
         <a
-          href="#projects"
-          className="border-1 px-6 md:px-8 lg:px-10 py-3 flex justify-center items-center text-base md:text-xl lg:text-xl bg-purple-800 text-white  rounded hover:bg-purple-600 transition-colors cursor-pointer"
+          href="/projects/mapshot"
+          className="px-8 py-4 text-lg font-semibold rounded-xl bg-purple-600 text-white border-2 border-purple-600 hover:bg-purple-700 hover:border-purple-700 transition-all transform hover:scale-105 active:scale-95 text-center shadow-lg"
         >
-          <span>MY PROJECTS</span>
+          Current Project
         </a>
       </div>
     </div>

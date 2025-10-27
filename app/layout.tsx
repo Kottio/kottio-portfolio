@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
+
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -89,6 +92,7 @@ export default function RootLayout({
       <body
         className={`${nunito.variable} antialiased text-neutral-800 bg-white`}      >
         {children}
+        <SpeedInsights />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -183,10 +183,10 @@ export default function HeroSection() {
         </div>
         <div className="px-5 md:px-10 lg:px-20 flex flex-col md:flex-row gap-3 md:gap-4 w-full md:w-auto">
           <a
-            href="#offers"
-            className="px-8 py-4 text-lg font-bold rounded-xl bg-white/90 backdrop-blur-sm text-gray-900 border-1 border-gray-600 hover:bg-gray-900 hover:text-white transition-all transform hover:scale-105 active:scale-95 text-center shadow-md"
+            href="/course"
+            className="px-8 py-4 text-lg font-bold rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white border-2 border-violet-600 transition-all transform hover:scale-105 active:scale-95 text-center shadow-lg"
           >
-            What I Offer
+            Full Stack Data Course
           </a>
           <a
             href="/projects/mapshot"

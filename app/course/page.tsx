@@ -20,8 +20,29 @@ import CourseEmailCaptureForm from "@/components/sections/CourseEmailCaptureForm
 export default function CoursePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      {/* Header Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 py-4">
+          <a
+            href="/"
+            className="flex items-center hover:opacity-80 transition-opacity w-fit"
+          >
+            <Image
+              src={"/face.png"}
+              alt="Thomas Cottiaux logo | KOTTIO logo"
+              height={50}
+              width={50}
+              className="h-[50px] w-[50px] lg:h-[60px] lg:w-[60px]"
+            />
+            <span className="text-black text-2xl lg:text-3xl font-bold ml-2">
+              KOTTIO
+            </span>
+          </a>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-50">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-50 pt-20">
         {/* Placeholder for background image - will be added tomorrow */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-white"></div>
 

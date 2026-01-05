@@ -2,6 +2,7 @@
 
 import HeroSection from "@/components/sections/HeroSection";
 import OffersSection from "@/components/sections/OffersSection";
+import CourseSection from "@/components/sections/CourseSection";
 import ProjectSection from "@/components/sections/ProjectsSection";
 import StackSection from "@/components/sections/StackSection";
 import TrustedBySection from "@/components/sections/TrustedBySection";
@@ -16,6 +17,7 @@ export default function Home() {
       <HeroSection></HeroSection>
       <main>
         {/* <OffersSection></OffersSection> */}
+        <CourseSection></CourseSection>
         <ProjectSection></ProjectSection>
         <StackSection></StackSection>
         <AboutSection></AboutSection>

@@ -43,8 +43,23 @@ export default function CoursePage() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-50 pt-20">
-        {/* Placeholder for background image - will be added tomorrow */}
+        {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-white"></div>
+
+        {/* Wisdom Wall screenshot - decorative element */}
+        <div
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-20 md:-translate-x-32 w-[500px] md:w-[700px] h-[400px] md:h-[550px] opacity-15
+         rotate-[-8deg] z-0"
+        >
+          <Image
+            src="/fullStackData/screenshotwidsomWall.png"
+            fill
+            alt="Wisdom Wall - Plateforme collaborative d'apprentissage data"
+            className="object-contain rounded-2xl shadow-2xl"
+            quality={85}
+            priority
+          />
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 md:py-32">
           <div className="flex flex-col md:flex-row gap-12 items-center">
@@ -170,107 +185,84 @@ export default function CoursePage() {
         </div>
       </section>
 
-      {/* Problem/Solution Section */}
+      {/* App Demo Section */}
       <section className="py-20 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Le problème avec les formations data traditionnelles
+              Voyez ce que vous allez construire
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Vous avez déjà suivi des cours data ? Laissez-moi deviner...
+              Un aperçu de l'application data complète que vous développerez
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-            {/* The Problem */}
-            <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-red-900 mb-6 flex items-center gap-2">
-                ❌ Approche Traditionnelle
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <span className="text-red-500 text-xl">•</span>
-                  <span className="text-gray-700">
-                    Datasets Kaggle statiques déjà nettoyés
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-red-500 text-xl">•</span>
-                  <span className="text-gray-700">
-                    Projets déconnectés de la réalité business
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-red-500 text-xl">•</span>
-                  <span className="text-gray-700">
-                    Aucune notion d'architecture scalable
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-red-500 text-xl">•</span>
-                  <span className="text-gray-700">
-                    Environnement local simpliste
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-red-500 text-xl">•</span>
-                  <span className="text-gray-700">
-                    Zéro déploiement en production
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            {/* The Solution */}
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-300 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-green-900 mb-6 flex items-center gap-2">
-                ✅ Full Stack Data Builder
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">
-                    Read replica d'une vraie app SaaS en production
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">
-                    API d'événements temps réel de clients B2B
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">
-                    Stack moderne : Docker, dlt, dbt, Metabase
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">
-                    Pipeline complet de A à Z
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">
-                    Déploiement sur DigitalOcean
-                  </span>
-                </li>
-              </ul>
-            </div>
+          <div className="relative rounded-3xl overflow-hidden border-4 border-indigo-200 shadow-2xl bg-slate-50">
+            <Image
+              src="/fullStackData/app-demo.gif"
+              width={1200}
+              height={714}
+              alt="Démo de l'application Full Stack Data - Pipeline en action"
+              className="w-full h-auto"
+              unoptimized
+              priority
+            />
           </div>
 
-          {/* Placeholder for screenshot */}
-          <div className="bg-slate-100 rounded-2xl p-12 text-center border-2 border-slate-200">
-            <Terminal className="w-16 h-16 text-violet-600 mx-auto mb-4" />
-            <p className="text-gray-600 text-lg font-semibold mb-2">
-              Screenshot de terminal à venir
+          <div className="mt-8 text-center">
+            <p className="text-gray-600 text-sm italic">
+              Application réelle avec ingestion, transformation et visualisation
+              de données
             </p>
-            <p className="text-gray-500 text-sm">
-              Docker containers + pipeline dlt en action
+          </div>
+        </div>
+      </section>
+
+      {/* Architecture Section */}
+      <section className="py-20 md:py-32 bg-gradient-to-b from-white to-slate-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              L'architecture que vous allez construire
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Un pipeline data complet, de l'ingestion à la visualisation
             </p>
+          </div>
+
+          <div className="bg-white rounded-3xl p-6 md:p-12 border-2 border-indigo-300 shadow-2xl">
+            <div className="relative w-full" style={{ minHeight: "500px" }}>
+              <Image
+                src="/fullStackData/schemacourse.png"
+                fill
+                alt="Architecture du pipeline data - API Kottio vers dlt, PostgreSQL, dbt, Metabase et Wisdom Wall"
+                className="object-contain"
+                quality={95}
+                priority
+              />
+            </div>
+            <div className="mt-8 text-center">
+              <p className="text-gray-700 text-lg font-semibold mb-3">
+                Pipeline Complet End-to-End
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <span className="bg-violet-100 text-violet-700 px-4 py-2 rounded-lg font-semibold text-sm">
+                  Ingestion (dlt)
+                </span>
+                <span className="text-gray-400">→</span>
+                <span className="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-lg font-semibold text-sm">
+                  Transformation (dbt)
+                </span>
+                <span className="text-gray-400">→</span>
+                <span className="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg font-semibold text-sm">
+                  Visualisation (Metabase)
+                </span>
+                <span className="text-gray-400">→</span>
+                <span className="bg-pink-100 text-pink-700 px-4 py-2 rounded-lg font-semibold text-sm">
+                  Déploiement
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -474,19 +466,6 @@ export default function CoursePage() {
               <p className="text-gray-600 text-sm">
                 Ajoutez du machine learning à vos pipelines data
               </p>
-            </div>
-          </div>
-
-          {/* Architecture Diagram Placeholder */}
-          <div className="bg-slate-100 rounded-2xl p-12 text-center border-2 border-slate-200">
-            <Layers className="w-16 h-16 text-indigo-600 mx-auto mb-4" />
-            <p className="text-gray-600 text-lg font-semibold mb-4">
-              Architecture Diagram à venir
-            </p>
-            <div className="text-gray-700 text-sm font-mono space-y-1 bg-white p-4 rounded-lg inline-block">
-              <p>API Kottio → dlt → PostgreSQL → dbt → Metabase</p>
-              <p className="text-center">↓</p>
-              <p className="text-center">Wisdom Wall</p>
             </div>
           </div>
         </div>

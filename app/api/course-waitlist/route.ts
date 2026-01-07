@@ -69,18 +69,6 @@ export async function POST(request: Request) {
       }
     }
 
-    // Send notification to yourself
-    await resend.emails.send({
-      from: "Full Stack Data Course <course@kottio.dev>",
-      to: process.env.NOTIFICATION_EMAIL || "kottiodev@gmail.com",
-      subject: "New Full Stack Data Course Signup! 🎓",
-      html: `
-        <h2>New course waitlist signup!</h2>
-        <p><strong>Email:</strong> ${normalizedEmail}</p>
-        <p><strong>Signed up at:</strong> ${new Date().toLocaleString()}</p>
-      `,
-    });
-
     // Send welcome email to the user
     await resend.emails.send({
       from: "kottioDev <noreply@kottio.dev>",

@@ -1,50 +1,91 @@
-import { NextResponse } from 'next/server'
-import { Resend } from 'resend'
+import { NextResponse } from "next/server";
+import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+// Comprehensive email validation
+function isValidEmail(email: string): boolean {
+  if (!email || typeof email !== "string") return false;
+
+  // Trim whitespace
+  email = email.trim().toLowerCase();
+
+  // Check length constraints
+  if (email.length < 3 || email.length > 254) return false;
+
+  // RFC 5322 compliant email regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) return false;
+
+  // Additional validation
+  const [localPart, domain] = email.split("@");
+
+  // Validate local part (before @)
+  if (localPart.length > 64) return false;
+  if (localPart.startsWith(".") || localPart.endsWith(".")) return false;
+  if (localPart.includes("..")) return false;
+
+  // Validate domain part (after @)
+  if (domain.length > 253) return false;
+  if (domain.startsWith(".") || domain.endsWith(".")) return false;
+  if (domain.includes("..")) return false;
+
+  // Check for valid TLD (at least 2 characters)
+  const domainParts = domain.split(".");
+  const tld = domainParts[domainParts.length - 1];
+  if (tld.length < 2) return false;
+
+  return true;
+}
 
 export async function POST(request: Request) {
   try {
-    const { email } = await request.json()
+    const { email } = await request.json();
 
     // Validate email
-    if (!email || !email.includes('@')) {
+    if (!isValidEmail(email)) {
       return NextResponse.json(
-        { error: 'Invalid email address' },
+        { error: "Please enter a valid email address" },
         { status: 400 }
-      )
+      );
     }
+
+    // Normalize email
+    const normalizedEmail = email.trim().toLowerCase();
 
     // Add to Resend Audience (same audience as Mapshot)
     if (process.env.RESEND_AUDIENCE_ID) {
       try {
         await resend.contacts.create({
-          email: email,
+          email: normalizedEmail,
           audienceId: process.env.RESEND_AUDIENCE_ID,
-        })
+        });
       } catch (contactError) {
         // Contact might already exist, continue anyway
-        console.log('Contact already exists or error adding to audience:', contactError)
+        console.log(
+          "Contact already exists or error adding to audience:",
+          contactError
+        );
       }
     }
 
     // Send notification to yourself
     await resend.emails.send({
-      from: 'Full Stack Data Course <course@kottio.dev>',
-      to: process.env.NOTIFICATION_EMAIL || 'your-email@example.com',
-      subject: 'New Full Stack Data Course Signup! 🎓',
+      from: "Full Stack Data Course <course@kottio.dev>",
+      to: process.env.NOTIFICATION_EMAIL || "kottiodev@gmail.com",
+      subject: "New Full Stack Data Course Signup! 🎓",
       html: `
         <h2>New course waitlist signup!</h2>
-        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Email:</strong> ${normalizedEmail}</p>
         <p><strong>Signed up at:</strong> ${new Date().toLocaleString()}</p>
       `,
-    })
+    });
 
     // Send welcome email to the user
     await resend.emails.send({
-      from: 'Thomas Cottiaux <noreply@kottio.dev>',
-      to: email,
-      subject: 'Welcome to the Full Stack Data Course Waitlist! 🚀',
+      from: "kottioDev <noreply@kottio.dev>",
+      to: normalizedEmail,
+      subject: "Welcome to the Full Stack Data Course Waitlist! 🚀",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h1 style="color: #7c3aed;">Welcome to the Full Stack Data Course!</h1>
@@ -76,17 +117,17 @@ export async function POST(request: Request) {
           </p>
         </div>
       `,
-    })
+    });
 
     return NextResponse.json(
-      { message: 'Successfully joined waitlist!' },
+      { message: "Successfully joined waitlist!" },
       { status: 200 }
-    )
+    );
   } catch (error) {
-    console.error('Error adding to waitlist:', error)
+    console.error("Error adding to waitlist:", error);
     return NextResponse.json(
-      { error: 'Failed to join waitlist. Please try again.' },
+      { error: "Failed to join waitlist. Please try again." },
       { status: 500 }
-    )
+    );
   }
 }

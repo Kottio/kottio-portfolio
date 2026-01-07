@@ -136,14 +136,14 @@ export default function CoursePage() {
                 </h3>
                 <p className="text-gray-600 mb-6">
                   Inscrivez-vous à la liste d'attente pour le{" "}
-                  <strong>tarif early-bird</strong> et du contenu bonus
-                  exclusif.
+                  <strong>tarif early-bird</strong>
                 </p>
 
                 <CourseEmailCaptureForm />
 
                 <p className="text-center text-xs text-gray-500 mt-4">
-                  Pas de spam. Juste des updates sur le lancement.
+                  Rejoins ma newsletter et reçois des nouvelles exclusives sur
+                  le lancement de mes formations.
                 </p>
 
                 {/* Benefits */}
@@ -156,10 +156,6 @@ export default function CoursePage() {
                     <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
                     <span>Accès prioritaire Cohorte 1</span>
                   </div>
-                  <div className="flex items-start gap-2 text-sm text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Contenu bonus avant lancement</span>
-                  </div>
                 </div>
               </div>
             </div>
@@ -168,7 +164,7 @@ export default function CoursePage() {
             <div className="block md:hidden w-full">
               <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-6 border border-gray-200">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Rejoignez la Cohorte 1
+                  Rejoignez le premier groupe
                 </h3>
                 <p className="text-gray-600 mb-4">
                   Inscrivez-vous pour le <strong>tarif early-bird</strong>.
@@ -190,10 +186,11 @@ export default function CoursePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Voyez ce que vous allez construire
+              Utilisez de vraies données de production
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Un aperçu de l'application data complète que vous développerez
+              Vous allez vous connecter à de vraies sources de données venant
+              d'une application que vous pourrez utiliser.
             </p>
           </div>
 
@@ -211,8 +208,8 @@ export default function CoursePage() {
 
           <div className="mt-8 text-center">
             <p className="text-gray-600 text-sm italic">
-              Application réelle avec ingestion, transformation et visualisation
-              de données
+              Cette application est en production, apprenez les vrais défis et
+              construisez un portfolio unique.
             </p>
           </div>
         </div>
@@ -275,7 +272,7 @@ export default function CoursePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Ce que vous allez construire
+              LE curriculum
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               9 modules pour passer de zéro à un pipeline data complet en
@@ -363,7 +360,7 @@ export default function CoursePage() {
               </div>
               <p className="text-gray-600 text-sm">
                 Définissez les KPIs business et explorez les données comme un
-                pro
+                pro. Star schema et design system
               </p>
             </div>
 
@@ -566,12 +563,12 @@ export default function CoursePage() {
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
                     Je ne suis pas un formateur à temps plein qui enseigne la
-                    data. Je suis un <strong>consultant data actif</strong> qui
-                    forme sur ce qu'il fait au quotidien.
+                    data. Je suis un <strong>consultant data </strong> qui forme
+                    sur ce qu'il fait au quotidien.
                   </p>
                   <p>
-                    Diplômé <strong>ESADE Business School</strong>, certifié{" "}
-                    <strong>AWS</strong>, j'accompagne des clients{" "}
+                    Diplômé <strong>ESADE Business School Miba</strong>,
+                    certifié <strong>AWS</strong>, j'accompagne des clients{" "}
                     <strong>B2B SaaS</strong> dans la construction de leurs
                     infrastructures data et analytics.
                   </p>
@@ -649,7 +646,7 @@ export default function CoursePage() {
 
           <div className="bg-yellow-50 border-2 border-yellow-300 rounded-2xl p-8">
             <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-              ⚡ Prérequis : Niveau Intermédiaire
+              ⚡ Prérequis : Niveau Débutant-Intermédiaire
             </h3>
             <p className="text-gray-700 mb-4">
               Cette formation n'est{" "}
@@ -673,7 +670,8 @@ export default function CoursePage() {
               <li className="flex items-start gap-2">
                 <CheckCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
                 <span>
-                  Confort avec le <strong>terminal</strong> / ligne de commande
+                  Un certain confort avec le <strong>terminal</strong> / ligne de
+                  commande
                 </span>
               </li>
             </ul>
@@ -686,19 +684,18 @@ export default function CoursePage() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Rejoignez la Cohorte 1
+              Rejoignez le premier groupe
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Lancement prévu <strong>Printemps 2025</strong>. Soyez les
-              premiers informés et bénéficiez du{" "}
-              <strong>tarif early-bird exclusif</strong>.
+              Lancement prévu bientot. Soyez les premiers informés et bénéficiez
+              du <strong>tarif early-bird exclusif</strong>.
             </p>
           </div>
 
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-2xl">
             <div className="mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                Be the First to Build 🚀
+                Soyez les premiers à construire 🚀
               </h3>
               <p className="text-center text-gray-600 mb-6">
                 Inscrivez-vous à la liste d'attente pour recevoir :
@@ -757,9 +754,9 @@ export default function CoursePage() {
                 💰 Quel est le prix de la formation ?
               </h3>
               <p className="text-gray-700">
-                Le prix sera annoncé aux inscrits de la liste d'attente en
-                priorité. Les early-birds bénéficieront d'une{" "}
-                <strong>réduction significative</strong> sur le tarif final.
+                Le tarif de lancement est de <strong>40€</strong> pour les
+                early-birds inscrits sur la liste d'attente. Ce tarif
+                promotionnel est limité aux premiers inscrits de la Cohorte 1.
               </p>
             </div>
 
